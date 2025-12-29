@@ -142,13 +142,20 @@ admin<img width="1181" height="582" alt="image" src="https://github.com/user-att
 
 <img width="1012" height="784" alt="image" src="https://github.com/user-attachments/assets/15fe731b-8be1-4b8c-a6eb-75e80fe0b9ed" />
 
+<img width="624" height="347" alt="image" src="https://github.com/user-attachments/assets/3991767a-fa55-41ad-8379-d30b88b8ae68" />
+
+<img width="623" height="369" alt="image" src="https://github.com/user-attachments/assets/5779ddb4-ea96-4889-81c7-f7fc57d23b5b" />
+
+<img width="1017" height="792" alt="image" src="https://github.com/user-attachments/assets/65888fea-f8ad-4c0a-a2bc-44e5701cda9f" />
+
+<img width="1003" height="779" alt="image" src="https://github.com/user-attachments/assets/c105bd11-ae19-49f3-b8f6-f5376ac5aae6" />
+<img width="1022" height="776" alt="image" src="https://github.com/user-attachments/assets/d0e3caa4-979c-4993-b261-277d7ef118ef" />
+
+<img width="1013" height="787" alt="image" src="https://github.com/user-attachments/assets/c073e136-32c8-4e6e-bff6-aed83ce7ee33" />
 
 
-
-
-
-
-
+### We had to go back and add that second NIC
+<img width="797" height="612" alt="image" src="https://github.com/user-attachments/assets/3e029f7b-3c81-4998-9e81-9667074c9ba8" />
 
 
 
