@@ -274,17 +274,146 @@ But we can ping so likely a firewall issue
 
 <img width="618" height="198" alt="image" src="https://github.com/user-attachments/assets/06cfd782-c8d0-49cc-a989-235c767a0475" />
 
+### After some thought it appears that we should have our Security Onion Manager in Tools rather than managment. This leeps the management and data planes separate and is line with the guide given.
+
+## In the Security Onion Manager*** 
+Step 1: Move only the management NIC to TOOLS.
+In ESXi, power off the Security Onion Manager VM.
+
+Edit settings → Network adapter 1 (management) → change the port group to your TOOLS VLAN /  Do not change the SPAN/TAP NIC.
+
+Step 2 (clarified): Change the existing IP
+
+On the Security Onion console, run:
+
+'sudo nmtui'
 
 
+<img width="1026" height="807" alt="image" src="https://github.com/user-attachments/assets/ecd822be-8ba3-4739-b894-6507b695716e" />
+
+Edit the management interface
+<img width="1033" height="792" alt="image" src="https://github.com/user-attachments/assets/4a567696-89b3-4ef6-bdef-5fc0d41bdbc0" />
+
+Replace the old IP with an unused 192.168.100.x
+<img width="1033" height="814" alt="image" src="https://github.com/user-attachments/assets/c5272776-0339-4990-aef6-33f6d12f8a5c" />
+
+<img width="1018" height="799" alt="image" src="https://github.com/user-attachments/assets/b1aa1be2-01fc-49f7-9320-c91713e54641" />
+
+<img width="1025" height="798" alt="image" src="https://github.com/user-attachments/assets/486d99ed-0ae5-4d4e-bfc9-fba088c81fbf" />
+
+Set the gateway to the Palo Alto TOOLS gateway (likely 192.168.100.1)
+ <img width="1024" height="801" alt="image" src="https://github.com/user-attachments/assets/37c8c64a-dddf-4d5e-ace9-9e1658e57991" />
+
+### We may have to double back with the DNS server, ideally we want is as our DC 192.168.120.23 but not sure if we have reachability in Palo Alto
+
+<img width="1016" height="799" alt="image" src="https://github.com/user-attachments/assets/647dc3ff-b225-452a-9fa9-a33d4f069b8b" />
+
+Save and exit
+
+<img width="1022" height="790" alt="image" src="https://github.com/user-attachments/assets/a6089828-f19d-47f8-8bf6-f85346223028" />
+
+Run 
+
+'ip a'
+
+<img width="1025" height="398" alt="image" src="https://github.com/user-attachments/assets/dbb8f5ea-2798-46c3-848d-b91f3acc2b75" />
+
+We changed the wrong NIC, let's go back and changed the correct one. Do not pick "WIRED"
+
+<img width="1019" height="791" alt="image" src="https://github.com/user-attachments/assets/0504c970-1008-420e-8ca5-56521a597f32" />
+
+Restart VM
+
+<img width="1018" height="798" alt="image" src="https://github.com/user-attachments/assets/bf899b5f-46ad-4ea9-861f-f79d38a4853d" />
+
+Since the second IP is duplicated let's change it my removing only the IP so it becomes sniff only.
+Set IPv4 Configuration = Disabled
+Remove any addresses, gateway, DNS
+
+<img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7691491b-d9d7-4a39-a5d3-cc3537286a68" />
+Save
+
+<img width="1027" height="792" alt="image" src="https://github.com/user-attachments/assets/dd1b0db5-59f7-484e-aa25-7aa50ae69f1a" />
+
+<img width="1038" height="800" alt="image" src="https://github.com/user-attachments/assets/59a3fac6-ffa1-45f0-96f9-bf5b6970d9c6" />
+
+Verify, shows no IP for ens37
+<img width="1030" height="798" alt="image" src="https://github.com/user-attachments/assets/bf03a76f-7529-4101-ae15-3b37eb51556a" />
+
+Next it wants us to verify ens37 is connected to our SPAN/TAP-PG
+
+<img width="637" height="183" alt="image" src="https://github.com/user-attachments/assets/6667964c-23c5-4442-86c3-e23b5e204d3d" />
+
+Step 3 (next)
+Verify the default route uses the Tools gateway:
+
+'ip route'
+
+<img width="724" height="83" alt="image" src="https://github.com/user-attachments/assets/69054897-1963-414a-a061-b9a350d7ae02" />
+
+Next we want to create a small temporary VM (Windows or Linux) on the Tools port group and give it:
+
+IP: 192.168.100.x
+
+Gateway: 192.168.100.1
+
+<img width="818" height="204" alt="image" src="https://github.com/user-attachments/assets/9bb2f296-9ef8-4344-8099-f1db347e8f40" />
+
+<img width="1179" height="741" alt="image" src="https://github.com/user-attachments/assets/39a3b3ef-01d8-44fd-b226-5a07ebd1ebd2" />
+
+When we try to go to the website we are having the same issues. 
+Most likely an issue with Palo Alto firewall
+
+<img width="2514" height="265" alt="image" src="https://github.com/user-attachments/assets/5caaef52-0c5c-4ba1-836f-17b0be07a847" />
 
 
+So the issue seem to be our firewall rules.
+Intra- Same room, never leaves
+Inter- Leaves the room (hits the router) comes back into the room
+
+Interzone is default deny to prevent lateral movement, equivalent to someone leaving the room, hitting the internet and coming back in the room and trying to have a conversation with another host. They could be contaminated like animorphs or body-snatchers or the aliens fron the movie The Faculty
+
+Intrazone never leaves the room so it's trusted by default.
+
+So if our vm is hitting the internet and attempting to have a conversation with another host, it's going to get denied. 
+
+Ping works because ICMP is allowed by default or by an existing rule.
+HTTPS fails because TCP/8443 is inter-zone traffic and there is no explicit allow rule for it.
 
 
+Step 4 (one action):
+Create an explicit security policy rule:
 
+Source zone: TOOLS
+Destination zone: TOOLS
+Source address: 192.168.100.0/24
+Destination address: 192.168.100.0/24
+Application: any
+Service: tcp/8443 (or application-default for now)
+Action: Allow
+Commit, then retry https://192.168.100.100:8443 from the Windows 11 VM.
 
+Confirm once the rule is created and committed, and we’ll test again.
 
+<img width="1087" height="390" alt="image" src="https://github.com/user-attachments/assets/5255278a-30ab-435b-b759-15b0929c709d" />
 
+<img width="1086" height="423" alt="image" src="https://github.com/user-attachments/assets/dbe44871-cb63-4a87-b44b-ccfd69e36713" />
 
+<img width="1077" height="413" alt="image" src="https://github.com/user-attachments/assets/2fdf806b-1ccd-452a-a5b5-b3821baaf4af" />
+
+<img width="1094" height="396" alt="image" src="https://github.com/user-attachments/assets/fc6e705e-4ca0-4384-84d4-95b30be77fe0" />
+
+New Service
+<img width="710" height="300" alt="image" src="https://github.com/user-attachments/assets/62f58a60-92f4-4dd6-a0dd-7e6e4775bf4e" />
+
+<img width="1092" height="367" alt="image" src="https://github.com/user-attachments/assets/d1d1000a-0224-49ad-903e-67d8b4c1f106" />
+
+COMMIT
+<img width="685" height="521" alt="image" src="https://github.com/user-attachments/assets/0acbd065-772c-4faf-824c-9299e1d3b331" />
+
+## Still not it
+
+# Reinstall Manager
 
 
 
