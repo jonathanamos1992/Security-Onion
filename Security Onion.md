@@ -157,8 +157,9 @@ admin<img width="1181" height="582" alt="image" src="https://github.com/user-att
 ### We had to go back and add that second NIC
 <img width="797" height="612" alt="image" src="https://github.com/user-attachments/assets/3e029f7b-3c81-4998-9e81-9667074c9ba8" />
 
+With two NICs
 
-
+<img width="1017" height="791" alt="image" src="https://github.com/user-attachments/assets/14831b11-a067-463c-ada1-f649a9a4591a" />
 
 
 
