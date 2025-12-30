@@ -161,6 +161,58 @@ With two NICs
 
 <img width="1017" height="791" alt="image" src="https://github.com/user-attachments/assets/14831b11-a067-463c-ada1-f649a9a4591a" />
 
+<img width="1014" height="767" alt="image" src="https://github.com/user-attachments/assets/05d68756-7dd7-4b4b-a83d-9f2db0de6c13" />
+
+<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/867a1c26-77bb-4c41-88dd-1023274ee34c" />
+
+<img width="1026" height="791" alt="image" src="https://github.com/user-attachments/assets/acd51cdd-715b-4991-988e-f0e09beaa7f8" />
+
+### DNS
+
+Broken DNS can cause problems down the road
+At the moment we don't know if port groups Security Onion that is in Management Port Group can reach our Domain Controller Windows Server 2022 in Domain Services via Palo Alto. 
+
+ChatGPT says in the meantime we can use our Palo Alto management interface (192.168.3.1) and change later.
+
+### Since we're not 100% sure those paths are routable, we'll stick with default
+<img width="1027" height="797" alt="image" src="https://github.com/user-attachments/assets/f82e8f02-60d4-4ef3-8581-13c6a3f0c043" />
+
+Keep search domain default
+<img width="1026" height="793" alt="image" src="https://github.com/user-attachments/assets/c28d84a9-d369-4bbe-818b-e1e04a54519d" />
+
+Keep default docker range
+
+<img width="1025" height="804" alt="image" src="https://github.com/user-attachments/assets/afbde1dc-556b-41fa-9405-9555457c4b4a" />
+
+<img width="1028" height="791" alt="image" src="https://github.com/user-attachments/assets/33556cf7-937f-492d-940c-2bcf995d009c" />
+
+<img width="1026" height="805" alt="image" src="https://github.com/user-attachments/assets/5e911fbe-6e4d-4a87-9ab1-014e46eb8fd9" />
+
+<img width="1021" height="800" alt="image" src="https://github.com/user-attachments/assets/d4910120-aa21-458a-88c8-2a9e3333131a" />
+
+<img width="1029" height="800" alt="image" src="https://github.com/user-attachments/assets/7b6745e1-1035-4f6e-a205-05c488877d60" />
+
+<img width="1028" height="793" alt="image" src="https://github.com/user-attachments/assets/e01f700c-4551-4ed5-a8b6-44c48a27528a" />
+
+We're using the 192.168.3.0/24 network since it is reachable from our switch
+<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/d6005a12-6869-45f0-b810-048c302f7911" />
+
+Verify
+<img width="642" height="438" alt="image" src="https://github.com/user-attachments/assets/a38625c8-0872-450c-a936-12fee9d52eaf" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
