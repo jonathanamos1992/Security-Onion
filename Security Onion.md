@@ -175,7 +175,7 @@ At the moment we don't know if port groups Security Onion that is in Management 
 ChatGPT says in the meantime we can use our Palo Alto management interface (192.168.3.1) and change later.
 
 ### Since we're not 100% sure those paths are routable, we'll stick with default
-<img width="1027" height="797" alt="image" src="https://github.com/user-attachments/assets/f82e8f02-60d4-4ef3-8581-13c6a3f0c043" />
+8.8.8.8,8.8.4.4
 
 Keep search domain default
 <img width="1026" height="793" alt="image" src="https://github.com/user-attachments/assets/c28d84a9-d369-4bbe-818b-e1e04a54519d" />
@@ -192,13 +192,87 @@ Keep default docker range
 
 <img width="1029" height="800" alt="image" src="https://github.com/user-attachments/assets/7b6745e1-1035-4f6e-a205-05c488877d60" />
 
-<img width="1028" height="793" alt="image" src="https://github.com/user-attachments/assets/e01f700c-4551-4ed5-a8b6-44c48a27528a" />
+
 
 We're using the 192.168.3.0/24 network since it is reachable from our switch
 <img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/d6005a12-6869-45f0-b810-048c302f7911" />
 
 Verify
-<img width="642" height="438" alt="image" src="https://github.com/user-attachments/assets/a38625c8-0872-450c-a936-12fee9d52eaf" />
+
+<img width="1019" height="814" alt="image" src="https://github.com/user-attachments/assets/c53ab8b8-ff99-4cab-9b24-d7d397587c1d" />
+
+
+Enter and let run. 
+~1 hour
+
+<img width="1034" height="798" alt="image" src="https://github.com/user-attachments/assets/9ce870fc-ef45-4406-adf6-ec6e8bc60b88" />
+
+### New VM for Secuirty Onion Sensor
+New Datastore
+<img width="942" height="601" alt="image" src="https://github.com/user-attachments/assets/23a104a1-629d-4433-b0e9-ac678621f65c" />
+
+<img width="950" height="594" alt="image" src="https://github.com/user-attachments/assets/692b4ab9-8481-4a96-a9ad-6759fa048334" />
+
+We have to add 2 NICS - 1 MANAGEMENT and 1 SPAN/TAP
+
+<img width="939" height="608" alt="image" src="https://github.com/user-attachments/assets/f1363a10-7e3b-442a-8408-65905da248b9" />
+
+<img width="1163" height="743" alt="image" src="https://github.com/user-attachments/assets/02e9c62b-cd78-451f-90a5-f1b26117f9cf" />
+
+<img width="1161" height="742" alt="image" src="https://github.com/user-attachments/assets/0e6708f8-76b7-4b87-ab9f-6729221b2f05" />
+
+<img width="1020" height="783" alt="image" src="https://github.com/user-attachments/assets/095ece27-b332-4a13-bb68-3ddcf9ce78dd" />
+
+<img width="1022" height="794" alt="image" src="https://github.com/user-attachments/assets/090a76e0-8979-4955-8fec-a92a61bf355d" />
+
+<img width="1020" height="792" alt="image" src="https://github.com/user-attachments/assets/b3fc15a5-29d9-4222-8ca0-19c30f565364" />
+
+
+<img width="1024" height="791" alt="image" src="https://github.com/user-attachments/assets/2eae23e6-2988-4e28-8a69-c66c9476a8b8" />
+
+<img width="1028" height="789" alt="image" src="https://github.com/user-attachments/assets/05fda1c6-3de4-4d39-b666-d212b6b57038" />
+
+<img width="1026" height="787" alt="image" src="https://github.com/user-attachments/assets/8a5ceed4-4926-4bc2-9043-61c34e210c28" />
+
+<img width="1030" height="799" alt="image" src="https://github.com/user-attachments/assets/b15b1620-c498-4d6b-80f5-2cf4b29f810e" />
+
+<img width="1022" height="790" alt="image" src="https://github.com/user-attachments/assets/c933bc49-bc62-4719-ae87-eee4c396925c" />
+
+<img width="1019" height="791" alt="image" src="https://github.com/user-attachments/assets/62a9ce1b-47c6-461d-bde7-5baafe49dd1b" />
+
+<img width="1029" height="795" alt="image" src="https://github.com/user-attachments/assets/f9e9ac22-a139-4f48-b9ab-c66891607624" />
+
+<img width="1022" height="788" alt="image" src="https://github.com/user-attachments/assets/5347c341-f5bb-4dce-bcb9-9ace62d28a07" />
+
+<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/50111be4-05f6-44e9-93bf-48a85dfe685c" />
+
+<img width="1024" height="784" alt="image" src="https://github.com/user-attachments/assets/1727462a-7e4a-4c64-bcc6-74cc856ed8cd" />
+
+<img width="1026" height="791" alt="image" src="https://github.com/user-attachments/assets/8c10744f-ee74-4fe5-9890-36d33e78fe3f" />
+
+<img width="1025" height="790" alt="image" src="https://github.com/user-attachments/assets/9c3c7dbe-f09a-4bae-ab53-091adc5aa2ab" />
+
+### We want to connect to the web GUI of Security Onion
+
+First Attempt Failed
+<img width="1429" height="978" alt="image" src="https://github.com/user-attachments/assets/615406e9-45f9-4376-9a61-4c124a586063" />
+
+But we can ping so likely a firewall issue
+<img width="1097" height="618" alt="image" src="https://github.com/user-attachments/assets/92075949-b6c6-4abb-bdd7-d3c75034dc8e" />
+
+<img width="1052" height="384" alt="image" src="https://github.com/user-attachments/assets/dc38cfc2-ba49-4316-9006-f0e871df91ae" />
+
+<img width="736" height="134" alt="image" src="https://github.com/user-attachments/assets/daa5db9d-f0be-4d99-9084-d2ecf01064f1" />
+
+<img width="847" height="268" alt="image" src="https://github.com/user-attachments/assets/69174bc7-c692-4f01-8f21-97d327d6159c" />
+
+<img width="521" height="77" alt="image" src="https://github.com/user-attachments/assets/6471d818-5d5a-4c5a-b9d5-55b03ccf774e" />
+
+
+<img width="476" height="237" alt="image" src="https://github.com/user-attachments/assets/7202511d-aa87-4087-98c7-b67b2f077294" />
+
+
+<img width="618" height="198" alt="image" src="https://github.com/user-attachments/assets/06cfd782-c8d0-49cc-a989-235c767a0475" />
 
 
 
