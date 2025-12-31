@@ -151,29 +151,17 @@ Login localhost
 
 We are storing the VM on Datastore 3 and pulling the iso from Datastore 2
 
-<img width="1016" height="795" alt="image" src="https://github.com/user-attachments/assets/d1f28dce-7c99-4c63-99b1-c0744466873c" />
+We have to change our sniffing port group NIC into promiscuous mode
 
-<img width="1025" height="799" alt="image" src="https://github.com/user-attachments/assets/908a38fa-3e98-4179-b82e-3b185614e12f" />
+<img width="3046" height="1111" alt="image" src="https://github.com/user-attachments/assets/905aab80-7f7b-4d68-b751-5afdb2191c71" />
 
-<img width="1019" height="795" alt="image" src="https://github.com/user-attachments/assets/92bbbad8-389f-4873-9d0d-a579f704bf32" />
+<img width="853" height="93" alt="image" src="https://github.com/user-attachments/assets/88500f6a-39f5-49ef-a296-f540c07f47f3" />
 
-<img width="1028" height="800" alt="image" src="https://github.com/user-attachments/assets/cb3b4b9d-f166-4790-b199-b731ec0f0a2e" />
+<img width="513" height="184" alt="image" src="https://github.com/user-attachments/assets/de98bbd0-d324-4134-bab4-0e10a717543e" />
 
-<img width="1028" height="790" alt="image" src="https://github.com/user-attachments/assets/312e3cbb-1975-4b3f-8d00-fd481d554b15" />
+<img width="749" height="84" alt="image" src="https://github.com/user-attachments/assets/9322ed65-1fb9-4c3c-ac21-cb6df03024a1" />
 
-<img width="1023" height="792" alt="image" src="https://github.com/user-attachments/assets/6dd104cf-5e0c-4ecb-9a7e-0b5c9d085d3c" />
-
-<img width="1032" height="793" alt="image" src="https://github.com/user-attachments/assets/941bf64d-c360-48e0-923d-ac8cc5064349" />
-
-<img width="1017" height="787" alt="image" src="https://github.com/user-attachments/assets/e050d9fc-4dd9-4de6-9eff-b99888992742" />
-
-
-
-
-
-
-
-
+<img width="446" height="163" alt="image" src="https://github.com/user-attachments/assets/d0fcae7e-4f27-4a59-9085-4b84e2573ada" />
 
 
 
