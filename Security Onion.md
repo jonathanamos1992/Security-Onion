@@ -71,105 +71,13 @@ against your endpoints using osquery.
 
 # Installation
 
-We're go to create a new VM using the Linux family and Version of Ubuntu linux
-<img width="1046" height="663" alt="image" src="https://github.com/user-attachments/assets/3eb3e817-92fc-477b-8184-dc29d586161b" />
+We're go to create a new VM using the Linux family and Version of Oracle 9
 
 
 ### Note
-Since we do not have a RAID array due to our RAID controller not being compatible with our hard drives, we ran into an issue of not having enoguh disk space when attmepting to create Security Onion Manager
+Since we do not have a RAID array due to our RAID controller not being compatible with our hard drives, we ran into an issue of not having enoguh disk space when attempting to create Security Onion Manager
 <img width="1129" height="690" alt="image" src="https://github.com/user-attachments/assets/bd02235a-6296-4c9e-bfcc-a98d02787187" />
 
-<img width="1037" height="643" alt="image" src="https://github.com/user-attachments/assets/9c652089-7199-48ac-b3a9-9135cb3e3684" />
-
-
-### Solution that ChatGPT gave us
-
-The solution that lets you create the VM
-
-Instruction 1:
-Create the Security Onion Manager VM with a smaller system disk:
-
-Size: 200–300 GB
-
-Thin provisioned
-
-This is just for the OS and apps.
-
-Instruction 2:
-After the VM is created:
-Add additional virtual disks to that same VM
-
-Put each one on a different datastore / physical disk
-
-Example:
-
-Disk 1: 300 GB (Datastore1)
-Disk 2: 1.6 TB (Datastore2)
-Disk 3: 1.6 TB (Datastore3)
-
-Security Onion will later combine these inside the VM.
-
-For now, we'll go with 1 TB Storage
-<img width="1041" height="655" alt="image" src="https://github.com/user-attachments/assets/f6d6ed90-4f72-4771-a7b1-7ca1822806e1" />
-
-We'll use Management-PG
-<img width="708" height="112" alt="image" src="https://github.com/user-attachments/assets/170f0ace-e407-440d-8e83-43257e34484d" />
-
-<img width="1038" height="674" alt="image" src="https://github.com/user-attachments/assets/e6bfb7e1-13f5-4d28-a3bf-66de52ea8c6a" />
-
-<img width="701" height="99" alt="image" src="https://github.com/user-attachments/assets/5b34f9fa-e698-4677-8f76-f6b45067a8e1" />
-
-<img width="961" height="599" alt="image" src="https://github.com/user-attachments/assets/cc52c6e6-0691-43f8-9f38-cf6bea7ffa52" />
-
-<img width="681" height="475" alt="image" src="https://github.com/user-attachments/assets/9e49aa6e-14e2-4b3c-8a21-5dc41eeeccf3" />
-
-Send it and power on machine
-
-Had an issue with licensing and CPU's, limit was 8 so we dropped CPU's from 12 to 8
-<img width="820" height="636" alt="image" src="https://github.com/user-attachments/assets/aba5dfd9-27a6-4a89-80c3-04593b234ed9" />
-
-
-<img width="1076" height="806" alt="image" src="https://github.com/user-attachments/assets/df9e988d-d4ea-4c7f-a388-417b6fd0e6f7" />
-
-<img width="1018" height="795" alt="image" src="https://github.com/user-attachments/assets/db5f21a4-4edd-4c1f-97a2-e57bff7533ed" />
-
-admin<img width="1181" height="582" alt="image" src="https://github.com/user-attachments/assets/7ca7e021-b2a3-47fe-8b6a-2d7560b46fd6" />
-<img width="1019" height="793" alt="image" src="https://github.com/user-attachments/assets/f939811c-983c-4fff-9dcf-07b47351f5cc" />
-
-<img width="1022" height="792" alt="image" src="https://github.com/user-attachments/assets/dbea481f-51a3-43b2-9407-798e0e286630" />
-
-<img width="1025" height="793" alt="image" src="https://github.com/user-attachments/assets/a19dff24-48d0-4b0e-96d8-dd8f1942a8b2" />
-
-<img width="1012" height="784" alt="image" src="https://github.com/user-attachments/assets/15fe731b-8be1-4b8c-a6eb-75e80fe0b9ed" />
-
-<img width="624" height="347" alt="image" src="https://github.com/user-attachments/assets/3991767a-fa55-41ad-8379-d30b88b8ae68" />
-
-<img width="623" height="369" alt="image" src="https://github.com/user-attachments/assets/5779ddb4-ea96-4889-81c7-f7fc57d23b5b" />
-
-<img width="1017" height="792" alt="image" src="https://github.com/user-attachments/assets/65888fea-f8ad-4c0a-a2bc-44e5701cda9f" />
-
-<img width="1003" height="779" alt="image" src="https://github.com/user-attachments/assets/c105bd11-ae19-49f3-b8f6-f5376ac5aae6" />
-<img width="1022" height="776" alt="image" src="https://github.com/user-attachments/assets/d0e3caa4-979c-4993-b261-277d7ef118ef" />
-
-<img width="1013" height="787" alt="image" src="https://github.com/user-attachments/assets/c073e136-32c8-4e6e-bff6-aed83ce7ee33" />
-
-
-### We had to go back and add that second NIC
-<img width="797" height="612" alt="image" src="https://github.com/user-attachments/assets/3e029f7b-3c81-4998-9e81-9667074c9ba8" />
-
-With two NICs
-
-<img width="1017" height="791" alt="image" src="https://github.com/user-attachments/assets/14831b11-a067-463c-ada1-f649a9a4591a" />
-
-<img width="1014" height="767" alt="image" src="https://github.com/user-attachments/assets/05d68756-7dd7-4b4b-a83d-9f2db0de6c13" />
-
-<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/867a1c26-77bb-4c41-88dd-1023274ee34c" />
-
-<img width="1026" height="791" alt="image" src="https://github.com/user-attachments/assets/acd51cdd-715b-4991-988e-f0e09beaa7f8" />
-
-### DNS
-
-Broken DNS can cause problems down the road
 At the moment we don't know if port groups Security Onion that is in Management Port Group can reach our Domain Controller Windows Server 2022 in Domain Services via Palo Alto. 
 
 ChatGPT says in the meantime we can use our Palo Alto management interface (192.168.3.1) and change later.
@@ -177,243 +85,90 @@ ChatGPT says in the meantime we can use our Palo Alto management interface (192.
 ### Since we're not 100% sure those paths are routable, we'll stick with default
 8.8.8.8,8.8.4.4
 
-Keep search domain default
-<img width="1026" height="793" alt="image" src="https://github.com/user-attachments/assets/c28d84a9-d369-4bbe-818b-e1e04a54519d" />
+<img width="946" height="595" alt="image" src="https://github.com/user-attachments/assets/8a341003-86f1-4829-8b07-5c6d4f718359" />
 
-Keep default docker range
+<img width="1027" height="794" alt="image" src="https://github.com/user-attachments/assets/ddc2821c-a799-448f-8e12-2db8825c410a" />
 
-<img width="1025" height="804" alt="image" src="https://github.com/user-attachments/assets/afbde1dc-556b-41fa-9405-9555457c4b4a" />
+<img width="1026" height="795" alt="image" src="https://github.com/user-attachments/assets/4014d2c2-7a93-4020-996c-be745cc5778c" />
 
-<img width="1028" height="791" alt="image" src="https://github.com/user-attachments/assets/33556cf7-937f-492d-940c-2bcf995d009c" />
+Login localhost
 
-<img width="1026" height="805" alt="image" src="https://github.com/user-attachments/assets/5e911fbe-6e4d-4a87-9ab1-014e46eb8fd9" />
+<img width="1024" height="792" alt="image" src="https://github.com/user-attachments/assets/6c713f89-a7b8-4e12-8908-af602872b2e4" />
 
-<img width="1021" height="800" alt="image" src="https://github.com/user-attachments/assets/d4910120-aa21-458a-88c8-2a9e3333131a" />
+<img width="1022" height="788" alt="image" src="https://github.com/user-attachments/assets/a69b6dcf-cce1-48ae-9650-7ccbf2e269dc" />
 
-<img width="1029" height="800" alt="image" src="https://github.com/user-attachments/assets/7b6745e1-1035-4f6e-a205-05c488877d60" />
+<img width="1022" height="794" alt="image" src="https://github.com/user-attachments/assets/f431f166-bb7d-48a5-a801-25f279227dce" />
 
+<img width="1021" height="788" alt="image" src="https://github.com/user-attachments/assets/4dfd2aae-8c3b-44a6-ba65-b89616982837" />
 
+<img width="1025" height="804" alt="image" src="https://github.com/user-attachments/assets/5e4eca8e-9949-4bc7-a790-4eeed103e61b" />
 
-We're using the 192.168.3.0/24 network since it is reachable from our switch
-<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/d6005a12-6869-45f0-b810-048c302f7911" />
+<img width="1025" height="790" alt="image" src="https://github.com/user-attachments/assets/323f2063-7e7a-4b0f-bae6-6647abbbf4c1" />
 
-Verify
+<img width="1024" height="797" alt="image" src="https://github.com/user-attachments/assets/1cb1fb28-4a33-4c4d-999b-45f64d9054f0" />
 
-<img width="1019" height="814" alt="image" src="https://github.com/user-attachments/assets/c53ab8b8-ff99-4cab-9b24-d7d397587c1d" />
+<img width="1028" height="790" alt="image" src="https://github.com/user-attachments/assets/5b6a5a92-f8a7-497c-81ea-99d8a6e04254" />
 
+<img width="1025" height="791" alt="image" src="https://github.com/user-attachments/assets/49f1c167-f763-47ef-90bf-611f188e4853" />
 
-Enter and let run. 
-~1 hour
+<img width="1024" height="782" alt="image" src="https://github.com/user-attachments/assets/b0706190-f72d-4276-bd75-c48711f419b8" />
 
-<img width="1034" height="798" alt="image" src="https://github.com/user-attachments/assets/9ce870fc-ef45-4406-adf6-ec6e8bc60b88" />
+<img width="1019" height="789" alt="image" src="https://github.com/user-attachments/assets/39e8af12-e61f-41be-b826-e405f3ca7abb" />
 
-### New VM for Secuirty Onion Sensor
-New Datastore
-<img width="942" height="601" alt="image" src="https://github.com/user-attachments/assets/23a104a1-629d-4433-b0e9-ac678621f65c" />
+<img width="1024" height="787" alt="image" src="https://github.com/user-attachments/assets/30adfc80-d149-430e-9cf3-8c352293eb1f" />
 
-<img width="950" height="594" alt="image" src="https://github.com/user-attachments/assets/692b4ab9-8481-4a96-a9ad-6759fa048334" />
+<img width="1020" height="792" alt="image" src="https://github.com/user-attachments/assets/9205e034-70f8-493f-a73a-c9d89dd3e2af" />
 
-We have to add 2 NICS - 1 MANAGEMENT and 1 SPAN/TAP
+<img width="1025" height="788" alt="image" src="https://github.com/user-attachments/assets/0cfbe8c5-9f26-4a5c-82a9-448f243ba6d9" />
 
-<img width="939" height="608" alt="image" src="https://github.com/user-attachments/assets/f1363a10-7e3b-442a-8408-65905da248b9" />
+<img width="1018" height="792" alt="image" src="https://github.com/user-attachments/assets/86ea3b65-fbbb-42bb-9e50-124362eca9ad" />
 
-<img width="1163" height="743" alt="image" src="https://github.com/user-attachments/assets/02e9c62b-cd78-451f-90a5-f1b26117f9cf" />
+<img width="1018" height="794" alt="image" src="https://github.com/user-attachments/assets/0d935888-5beb-4191-8916-45d11da9f7a0" />
 
-<img width="1161" height="742" alt="image" src="https://github.com/user-attachments/assets/0e6708f8-76b7-4b87-ab9f-6729221b2f05" />
+<img width="1021" height="785" alt="image" src="https://github.com/user-attachments/assets/15c0ea6e-f477-4707-a1da-be9eaa7a59a0" />
 
-<img width="1020" height="783" alt="image" src="https://github.com/user-attachments/assets/095ece27-b332-4a13-bb68-3ddcf9ce78dd" />
+<img width="1016" height="782" alt="image" src="https://github.com/user-attachments/assets/6f4ce0cd-6e41-49d8-8927-6b4adc09a178" />
 
-<img width="1022" height="794" alt="image" src="https://github.com/user-attachments/assets/090a76e0-8979-4955-8fec-a92a61bf355d" />
+<img width="1022" height="793" alt="image" src="https://github.com/user-attachments/assets/adc07959-864b-40b6-8ce7-55c83d7ddc44" />
 
-<img width="1020" height="792" alt="image" src="https://github.com/user-attachments/assets/b3fc15a5-29d9-4222-8ca0-19c30f565364" />
+<img width="1026" height="790" alt="image" src="https://github.com/user-attachments/assets/8983a4aa-40e4-495a-9e27-82977f76db9c" />
 
+<img width="1025" height="791" alt="image" src="https://github.com/user-attachments/assets/12ad90fb-556c-4894-b2ae-83ac3199978d" />
 
-<img width="1024" height="791" alt="image" src="https://github.com/user-attachments/assets/2eae23e6-2988-4e28-8a69-c66c9476a8b8" />
+<img width="1028" height="786" alt="image" src="https://github.com/user-attachments/assets/0294bb3d-c425-4879-b91a-6e657c0d15cf" />
 
-<img width="1028" height="789" alt="image" src="https://github.com/user-attachments/assets/05fda1c6-3de4-4d39-b666-d212b6b57038" />
+<img width="1025" height="797" alt="image" src="https://github.com/user-attachments/assets/c6101d94-9401-484c-96df-d411f96fcb34" />
 
-<img width="1026" height="787" alt="image" src="https://github.com/user-attachments/assets/8a5ceed4-4926-4bc2-9043-61c34e210c28" />
+### New VM for Security Onion Sensor
 
-<img width="1030" height="799" alt="image" src="https://github.com/user-attachments/assets/b15b1620-c498-4d6b-80f5-2cf4b29f810e" />
+<img width="941" height="594" alt="image" src="https://github.com/user-attachments/assets/06744ecb-c4e0-4a09-8065-60f558efade0" />
 
-<img width="1022" height="790" alt="image" src="https://github.com/user-attachments/assets/c933bc49-bc62-4719-ae87-eee4c396925c" />
+<img width="940" height="592" alt="image" src="https://github.com/user-attachments/assets/99f9ccbc-6b7e-4adf-bc00-bbde7d9fa139" />
 
-<img width="1019" height="791" alt="image" src="https://github.com/user-attachments/assets/62a9ce1b-47c6-461d-bde7-5baafe49dd1b" />
+<img width="954" height="595" alt="image" src="https://github.com/user-attachments/assets/e27f8af7-d761-4aa0-b5f5-deee78094426" />
 
-<img width="1029" height="795" alt="image" src="https://github.com/user-attachments/assets/f9e9ac22-a139-4f48-b9ab-c66891607624" />
+<img width="940" height="589" alt="image" src="https://github.com/user-attachments/assets/fc28f617-d727-4a78-953a-f75332ad14c5" />
 
-<img width="1022" height="788" alt="image" src="https://github.com/user-attachments/assets/5347c341-f5bb-4dce-bcb9-9ace62d28a07" />
+We are storing the VM on Datastore 3 and pulling the iso from Datastore 2
 
-<img width="1022" height="789" alt="image" src="https://github.com/user-attachments/assets/50111be4-05f6-44e9-93bf-48a85dfe685c" />
+<img width="1016" height="795" alt="image" src="https://github.com/user-attachments/assets/d1f28dce-7c99-4c63-99b1-c0744466873c" />
 
-<img width="1024" height="784" alt="image" src="https://github.com/user-attachments/assets/1727462a-7e4a-4c64-bcc6-74cc856ed8cd" />
+<img width="1025" height="799" alt="image" src="https://github.com/user-attachments/assets/908a38fa-3e98-4179-b82e-3b185614e12f" />
 
-<img width="1026" height="791" alt="image" src="https://github.com/user-attachments/assets/8c10744f-ee74-4fe5-9890-36d33e78fe3f" />
+<img width="1019" height="795" alt="image" src="https://github.com/user-attachments/assets/92bbbad8-389f-4873-9d0d-a579f704bf32" />
 
-<img width="1025" height="790" alt="image" src="https://github.com/user-attachments/assets/9c3c7dbe-f09a-4bae-ab53-091adc5aa2ab" />
+<img width="1028" height="800" alt="image" src="https://github.com/user-attachments/assets/cb3b4b9d-f166-4790-b199-b731ec0f0a2e" />
 
-### We want to connect to the web GUI of Security Onion
+<img width="1028" height="790" alt="image" src="https://github.com/user-attachments/assets/312e3cbb-1975-4b3f-8d00-fd481d554b15" />
 
-First Attempt Failed
-<img width="1429" height="978" alt="image" src="https://github.com/user-attachments/assets/615406e9-45f9-4376-9a61-4c124a586063" />
+<img width="1023" height="792" alt="image" src="https://github.com/user-attachments/assets/6dd104cf-5e0c-4ecb-9a7e-0b5c9d085d3c" />
 
-But we can ping so likely a firewall issue
-<img width="1097" height="618" alt="image" src="https://github.com/user-attachments/assets/92075949-b6c6-4abb-bdd7-d3c75034dc8e" />
+<img width="1032" height="793" alt="image" src="https://github.com/user-attachments/assets/941bf64d-c360-48e0-923d-ac8cc5064349" />
 
-<img width="1052" height="384" alt="image" src="https://github.com/user-attachments/assets/dc38cfc2-ba49-4316-9006-f0e871df91ae" />
+<img width="1017" height="787" alt="image" src="https://github.com/user-attachments/assets/e050d9fc-4dd9-4de6-9eff-b99888992742" />
 
-<img width="736" height="134" alt="image" src="https://github.com/user-attachments/assets/daa5db9d-f0be-4d99-9084-d2ecf01064f1" />
 
-<img width="847" height="268" alt="image" src="https://github.com/user-attachments/assets/69174bc7-c692-4f01-8f21-97d327d6159c" />
 
-<img width="521" height="77" alt="image" src="https://github.com/user-attachments/assets/6471d818-5d5a-4c5a-b9d5-55b03ccf774e" />
-
-
-<img width="476" height="237" alt="image" src="https://github.com/user-attachments/assets/7202511d-aa87-4087-98c7-b67b2f077294" />
-
-
-<img width="618" height="198" alt="image" src="https://github.com/user-attachments/assets/06cfd782-c8d0-49cc-a989-235c767a0475" />
-
-### After some thought it appears that we should have our Security Onion Manager in Tools rather than managment. This leeps the management and data planes separate and is line with the guide given.
-
-## In the Security Onion Manager*** 
-Step 1: Move only the management NIC to TOOLS.
-In ESXi, power off the Security Onion Manager VM.
-
-Edit settings → Network adapter 1 (management) → change the port group to your TOOLS VLAN /  Do not change the SPAN/TAP NIC.
-
-Step 2 (clarified): Change the existing IP
-
-On the Security Onion console, run:
-
-'sudo nmtui'
-
-
-<img width="1026" height="807" alt="image" src="https://github.com/user-attachments/assets/ecd822be-8ba3-4739-b894-6507b695716e" />
-
-Edit the management interface
-<img width="1033" height="792" alt="image" src="https://github.com/user-attachments/assets/4a567696-89b3-4ef6-bdef-5fc0d41bdbc0" />
-
-Replace the old IP with an unused 192.168.100.x
-<img width="1033" height="814" alt="image" src="https://github.com/user-attachments/assets/c5272776-0339-4990-aef6-33f6d12f8a5c" />
-
-<img width="1018" height="799" alt="image" src="https://github.com/user-attachments/assets/b1aa1be2-01fc-49f7-9320-c91713e54641" />
-
-<img width="1025" height="798" alt="image" src="https://github.com/user-attachments/assets/486d99ed-0ae5-4d4e-bfc9-fba088c81fbf" />
-
-Set the gateway to the Palo Alto TOOLS gateway (likely 192.168.100.1)
- <img width="1024" height="801" alt="image" src="https://github.com/user-attachments/assets/37c8c64a-dddf-4d5e-ace9-9e1658e57991" />
-
-### We may have to double back with the DNS server, ideally we want is as our DC 192.168.120.23 but not sure if we have reachability in Palo Alto
-
-<img width="1016" height="799" alt="image" src="https://github.com/user-attachments/assets/647dc3ff-b225-452a-9fa9-a33d4f069b8b" />
-
-Save and exit
-
-<img width="1022" height="790" alt="image" src="https://github.com/user-attachments/assets/a6089828-f19d-47f8-8bf6-f85346223028" />
-
-Run 
-
-'ip a'
-
-<img width="1025" height="398" alt="image" src="https://github.com/user-attachments/assets/dbb8f5ea-2798-46c3-848d-b91f3acc2b75" />
-
-We changed the wrong NIC, let's go back and changed the correct one. Do not pick "WIRED"
-
-<img width="1019" height="791" alt="image" src="https://github.com/user-attachments/assets/0504c970-1008-420e-8ca5-56521a597f32" />
-
-Restart VM
-
-<img width="1018" height="798" alt="image" src="https://github.com/user-attachments/assets/bf899b5f-46ad-4ea9-861f-f79d38a4853d" />
-
-Since the second IP is duplicated let's change it my removing only the IP so it becomes sniff only.
-Set IPv4 Configuration = Disabled
-Remove any addresses, gateway, DNS
-
-<img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7691491b-d9d7-4a39-a5d3-cc3537286a68" />
-Save
-
-<img width="1027" height="792" alt="image" src="https://github.com/user-attachments/assets/dd1b0db5-59f7-484e-aa25-7aa50ae69f1a" />
-
-<img width="1038" height="800" alt="image" src="https://github.com/user-attachments/assets/59a3fac6-ffa1-45f0-96f9-bf5b6970d9c6" />
-
-Verify, shows no IP for ens37
-<img width="1030" height="798" alt="image" src="https://github.com/user-attachments/assets/bf03a76f-7529-4101-ae15-3b37eb51556a" />
-
-Next it wants us to verify ens37 is connected to our SPAN/TAP-PG
-
-<img width="637" height="183" alt="image" src="https://github.com/user-attachments/assets/6667964c-23c5-4442-86c3-e23b5e204d3d" />
-
-Step 3 (next)
-Verify the default route uses the Tools gateway:
-
-'ip route'
-
-<img width="724" height="83" alt="image" src="https://github.com/user-attachments/assets/69054897-1963-414a-a061-b9a350d7ae02" />
-
-Next we want to create a small temporary VM (Windows or Linux) on the Tools port group and give it:
-
-IP: 192.168.100.x
-
-Gateway: 192.168.100.1
-
-<img width="818" height="204" alt="image" src="https://github.com/user-attachments/assets/9bb2f296-9ef8-4344-8099-f1db347e8f40" />
-
-<img width="1179" height="741" alt="image" src="https://github.com/user-attachments/assets/39a3b3ef-01d8-44fd-b226-5a07ebd1ebd2" />
-
-When we try to go to the website we are having the same issues. 
-Most likely an issue with Palo Alto firewall
-
-<img width="2514" height="265" alt="image" src="https://github.com/user-attachments/assets/5caaef52-0c5c-4ba1-836f-17b0be07a847" />
-
-
-So the issue seem to be our firewall rules.
-Intra- Same room, never leaves
-Inter- Leaves the room (hits the router) comes back into the room
-
-Interzone is default deny to prevent lateral movement, equivalent to someone leaving the room, hitting the internet and coming back in the room and trying to have a conversation with another host. They could be contaminated like animorphs or body-snatchers or the aliens fron the movie The Faculty
-
-Intrazone never leaves the room so it's trusted by default.
-
-So if our vm is hitting the internet and attempting to have a conversation with another host, it's going to get denied. 
-
-Ping works because ICMP is allowed by default or by an existing rule.
-HTTPS fails because TCP/8443 is inter-zone traffic and there is no explicit allow rule for it.
-
-
-Step 4 (one action):
-Create an explicit security policy rule:
-
-Source zone: TOOLS
-Destination zone: TOOLS
-Source address: 192.168.100.0/24
-Destination address: 192.168.100.0/24
-Application: any
-Service: tcp/8443 (or application-default for now)
-Action: Allow
-Commit, then retry https://192.168.100.100:8443 from the Windows 11 VM.
-
-Confirm once the rule is created and committed, and we’ll test again.
-
-<img width="1087" height="390" alt="image" src="https://github.com/user-attachments/assets/5255278a-30ab-435b-b759-15b0929c709d" />
-
-<img width="1086" height="423" alt="image" src="https://github.com/user-attachments/assets/dbe44871-cb63-4a87-b44b-ccfd69e36713" />
-
-<img width="1077" height="413" alt="image" src="https://github.com/user-attachments/assets/2fdf806b-1ccd-452a-a5b5-b3821baaf4af" />
-
-<img width="1094" height="396" alt="image" src="https://github.com/user-attachments/assets/fc6e705e-4ca0-4384-84d4-95b30be77fe0" />
-
-New Service
-<img width="710" height="300" alt="image" src="https://github.com/user-attachments/assets/62f58a60-92f4-4dd6-a0dd-7e6e4775bf4e" />
-
-<img width="1092" height="367" alt="image" src="https://github.com/user-attachments/assets/d1d1000a-0224-49ad-903e-67d8b4c1f106" />
-
-COMMIT
-<img width="685" height="521" alt="image" src="https://github.com/user-attachments/assets/0acbd065-772c-4faf-824c-9299e1d3b331" />
-
-## Still not it
-
-# Reinstall Manager
 
 
 
