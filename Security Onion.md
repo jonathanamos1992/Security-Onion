@@ -203,22 +203,32 @@ Web into the SecOnion Manager -> Administration -> Configuration and scroll down
 
 <img width="2217" height="1053" alt="image" src="https://github.com/user-attachments/assets/6d0605bb-0d90-4b49-8a10-47ebfa8dbb12" />
 
-Let's try this command
+### Let's try this command
 <img width="1027" height="799" alt="image" src="https://github.com/user-attachments/assets/640c1188-46ef-4371-b513-98cb79d948cc" />
 
-From the Guide we received
+### We waited for that command to finsh and got this screen showing it worked
+<img width="1028" height="803" alt="image" src="https://github.com/user-attachments/assets/54470127-369a-49b5-b255-e211299be2ff" />
 
-<img width="938" height="133" alt="image" src="https://github.com/user-attachments/assets/46ea641b-0471-4817-b2d6-dc5b16fa40b2" />
+### Now we're able to add our sniffer NIC
+<img width="1039" height="793" alt="image" src="https://github.com/user-attachments/assets/73b3c232-91ac-4803-bfc2-1bae1a70bff3" />
 
+<img width="1031" height="805" alt="image" src="https://github.com/user-attachments/assets/d3e1b817-de07-4355-acd9-c8dcc0fa619f" />
 
+<img width="1038" height="790" alt="image" src="https://github.com/user-attachments/assets/6c7149cc-be2b-477e-8936-ac84dd7a96bf" />
 
+<img width="1034" height="791" alt="image" src="https://github.com/user-attachments/assets/855f1081-79c9-4d61-9786-4ffbbaffb11d" />
 
+### From Security Onion Web GUI
 
+<img width="2207" height="1061" alt="image" src="https://github.com/user-attachments/assets/1ef96a37-2fa5-4dbf-80d0-9741a3066a78" />
 
+<img width="2203" height="1063" alt="image" src="https://github.com/user-attachments/assets/958794fc-d305-46fe-bc90-462b89906503" />
 
+<img width="2210" height="1054" alt="image" src="https://github.com/user-attachments/assets/a7b74db9-2ab0-43b4-bdb6-98464ac28dc2" />
 
+### Finally, you can console into the SecO Sensor and use the "sudo so-status" command to check the service status and health of the node
 
-
+<img width="1025" height="396" alt="image" src="https://github.com/user-attachments/assets/ad0b905e-1f0c-4496-bd9b-80d9bdd04876" />
 
 
 
