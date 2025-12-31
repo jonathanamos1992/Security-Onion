@@ -184,13 +184,31 @@ Choose the same NIC as our TOOLS-PG
 
 <img width="1029" height="791" alt="image" src="https://github.com/user-attachments/assets/f9bd12c5-5619-4f14-b329-eb5948db7db4" />
 
+<img width="1030" height="791" alt="image" src="https://github.com/user-attachments/assets/3c024fd0-8e4b-4a87-bdfd-92ace25f339d" />
 
+<img width="1026" height="791" alt="image" src="https://github.com/user-attachments/assets/b388e455-0968-42a7-801f-0906e04cf2c8" />
 
+<img width="1027" height="793" alt="image" src="https://github.com/user-attachments/assets/379d7e6d-1042-471d-8687-9aa545b1c04d" />
 
+Hit Enter
 
+We get this screen
 
+<img width="1027" height="805" alt="image" src="https://github.com/user-attachments/assets/4c25eba3-3be9-4f2a-aa08-2e98aa10969d" />
 
+### enable connectivity between the Manager and Sensor Nodes
+Web into the SecOnion Manager -> Administration -> Configuration and scroll down to Firewall -> Sensor and input the IP of the sensor node
 
+<img width="1345" height="903" alt="image" src="https://github.com/user-attachments/assets/8386046d-2124-4bc6-9eb0-460dc1e528cd" />
+
+<img width="2217" height="1053" alt="image" src="https://github.com/user-attachments/assets/6d0605bb-0d90-4b49-8a10-47ebfa8dbb12" />
+
+Let's try this command
+<img width="1027" height="799" alt="image" src="https://github.com/user-attachments/assets/640c1188-46ef-4371-b513-98cb79d948cc" />
+
+From the Guide we received
+
+<img width="938" height="133" alt="image" src="https://github.com/user-attachments/assets/46ea641b-0471-4817-b2d6-dc5b16fa40b2" />
 
 
 
