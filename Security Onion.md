@@ -163,6 +163,45 @@ We have to change our sniffing port group NIC into promiscuous mode
 
 <img width="446" height="163" alt="image" src="https://github.com/user-attachments/assets/d0fcae7e-4f27-4a59-9085-4b84e2573ada" />
 
+<img width="1027" height="794" alt="image" src="https://github.com/user-attachments/assets/d9f03ad8-60f0-4ff2-9ae7-382bf01dab67" />
+
+<img width="1027" height="792" alt="image" src="https://github.com/user-attachments/assets/2f8eb2e1-c1b0-428c-9d48-c9dc7e0794aa" />
+
+<img width="1019" height="787" alt="image" src="https://github.com/user-attachments/assets/a467bd26-89bf-458f-b965-659ee074d471" />
+
+<img width="1025" height="789" alt="image" src="https://github.com/user-attachments/assets/f9090f90-c857-48be-8602-9bc319288ef9" />
+
+
+<img width="703" height="171" alt="image" src="https://github.com/user-attachments/assets/78aed57f-679c-4693-a01e-488ae080b1a2" />
+Choose the same NIC as our TOOLS-PG
+<img width="1032" height="791" alt="image" src="https://github.com/user-attachments/assets/355660d7-af84-40f2-b80d-07eeac7768e9" />
+
+<img width="1022" height="787" alt="image" src="https://github.com/user-attachments/assets/f19798e4-e392-400b-8967-72b9090f18e8" />
+
+<img width="1027" height="788" alt="image" src="https://github.com/user-attachments/assets/f69a4d86-da66-4f4d-a739-378b378bcaec" />
+
+<img width="1021" height="798" alt="image" src="https://github.com/user-attachments/assets/84b70025-c482-4067-94fe-ab008c7fb93e" />
+
+<img width="1029" height="791" alt="image" src="https://github.com/user-attachments/assets/f9bd12c5-5619-4f14-b329-eb5948db7db4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
