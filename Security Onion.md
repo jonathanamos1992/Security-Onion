@@ -323,9 +323,9 @@ We wanted to check to see if our sensor was placed correctly so we ran 'ip addr'
 
 <img width="987" height="614" alt="image" src="https://github.com/user-attachments/assets/a743ae26-2275-47e6-9e51-70ccaf1ba08b" />
 
-### Breakdown
+## Breakdown
 
-lo (loopback)
+### lo (loopback)
 Internal-only interface
 Used by the OS to talk to itself
 127.0.0.1
@@ -333,7 +333,7 @@ Not related to networking, sensors, or alerts
 You can ignore this for Security Onion placement.
 <img width="762" height="70" alt="image" src="https://github.com/user-attachments/assets/6ee74130-1f74-4f4d-8f17-00376390ce03" />
 
-Management interface (for the sensor) ens34 (this one matters)
+### Management interface (for the sensor) ens34 (this one matters)
 inet 192.168.100.99/24
 This confirms management IP (for the sensor)
 
@@ -342,7 +342,7 @@ Used for: Web UI, Logs shipping, SSH
 NOT used for traffic inspection
 <img width="785" height="119" alt="image" src="https://github.com/user-attachments/assets/139175cc-5497-4c1b-ae7d-a1f7135e27f0" />
 
-Monitor interface ens35 (this is the key)
+### Monitor interface ens35 (this is the key)
 3: ens35: <BROADCAST,NOARP,PROMISC,SLAVE,UP,LOWER_UP> ...
 
 Important flags:
@@ -361,7 +361,7 @@ Bond interface (logical grouping)
 4: bond0: <BROADCAST,MULTICAST,PROMISC,MASTER,UP,LOWER_UP> ...
 
 
-bond0
+### bond0
 
 Logical interface that groups monitor NICs
 
@@ -385,7 +385,7 @@ This is normal and correct.
 
 <img width="694" height="174" alt="image" src="https://github.com/user-attachments/assets/c0efaf3c-bad4-4650-968c-dc93ee72075a" />
 
-Docker bridge/sobridge (internal only)
+### Docker bridge/sobridge (internal only)
 6: sobridge:
 inet 172.17.1.1/24
 
@@ -396,9 +396,10 @@ Used by Security Onion containers
 Not real network traffic
 
 Ignore for sensor placement
-<img width="771" height="55" alt="image" src="https://github.com/user-attachments/assets/38a8667e-a084-4351-9a03-f1f821688ff7" />
+<img width="858" height="68" alt="image" src="https://github.com/user-attachments/assets/693e6498-a215-4d13-a73a-d98c433ac8fe" />
 
-docker0
+
+### docker0
 inet 172.17.0.1/24
 
 Default Docker bridge
@@ -407,30 +408,72 @@ Same purpose as above
 
 Not monitored traffic
 
+<img width="804" height="52" alt="image" src="https://github.com/user-attachments/assets/ce13793b-950f-47d3-a40b-c755c04f20b2" />
+
+veth* interfaces (lots of them)
+veth66e02830f3f2
+veth156e4ab0df34
+veth68472a0df36
+...
 
 
+### veth interfaces
+
+Virtual Ethernet pairs
+One side in Docker container
+One side on the host
+Each Security Onion service gets one
+Normal to see many
+Not something you configure
+
+<img width="993" height="197" alt="image" src="https://github.com/user-attachments/assets/722f63d2-6dbc-4d14-b9a2-52f707a9b59c" />
+
+### For our lab we want to know if we'll be able to see traffic
+<img width="977" height="928" alt="image" src="https://github.com/user-attachments/assets/fd6e0ed3-3f0c-4eff-90f0-5180fd6c0e61" />
+
+<img width="855" height="902" alt="image" src="https://github.com/user-attachments/assets/3bd57da3-57d7-4564-a968-2f3969b55745" />
+
+We're going to place our sensor to monitor traffic on our Palo Alto VM
+
+<img width="1008" height="436" alt="image" src="https://github.com/user-attachments/assets/eb634e39-fa88-45dd-8a66-51fdad11668a" />
 
 
+<img width="678" height="410" alt="image" src="https://github.com/user-attachments/assets/82d834e4-c241-4f60-882d-607a76ed7e77" />
 
+### We want to verify we see traffic
 
+we ran 
 
+'sudo tcpdump -i bond0 icmp' 
 
+and from our Ubuntu host, we pinged the 192.168.120.23 but did not see any traffic on the listening interface of the Sensor
 
+<img width="1856" height="167" alt="image" src="https://github.com/user-attachments/assets/c4cf68c0-5a4f-41e2-ac5f-9caa004f0610" />
 
+ChatGPT tells us to add a dedicated "monitor" NIC to the Palo Alto
 
+Step 1 — Add the monitor NIC to the Palo Alto VM
 
+In ESXi:
 
+Step 1:
+Power off the Palo Alto VM
+Edit settings
+Add Network Adapter
+Connect it to the SPAN/TAP port group
+Do not assign it an IP later
 
+(We ran out of NIC spaces in Palo Alto so we are going to remove Client-PG and consolidate Legacy Port group and Internal-pg
 
+We'll have to remove the vm's in internal from the domain.
 
+To remove from Domain
 
+Step 1 (only step)
 
-
-
-
-
-
-
+On FLARE VM, log in with a local administrator account (not a domain account).
+Do not remove it from the domain yet.
+Reply “logged in locally” and I’ll give the next single step.
 
 
 
