@@ -475,36 +475,93 @@ On FLARE VM, log in with a local administrator account (not a domain account).
 Do not remove it from the domain yet.
 Reply “logged in locally” and I’ll give the next single step.
 
+(This is just to show how to login if the bottom left still shows the domain admin)
+This forces Windows to use the local SAM, not AD.
 
+<img width="721" height="78" alt="image" src="https://github.com/user-attachments/assets/9ca98e30-27b2-4007-8c5a-1200c5ba071e" />
 
+<img width="1416" height="901" alt="image" src="https://github.com/user-attachments/assets/20bd9422-9e44-47eb-a6c7-62ecc5bfa9a7" />
 
+On FLARE VM:
 
+Settings → System → About
+Click Rename this PC (advanced)
+Click Change
+Select Workgroup
+Enter a name like:
+LEGACY
 
+When prompted, enter domain admin credentials
+Reboot when asked
 
+<img width="1415" height="904" alt="image" src="https://github.com/user-attachments/assets/117c3454-20d7-4f5b-b950-e5fbf57e7074" />
+<img width="1417" height="906" alt="image" src="https://github.com/user-attachments/assets/e11a3da2-3a6b-4f02-a8f5-51e6e37f2465" />
+<img width="419" height="465" alt="image" src="https://github.com/user-attachments/assets/eb1b2940-3cac-4171-9a33-5ce32407144b" />
+<img width="319" height="387" alt="image" src="https://github.com/user-attachments/assets/c78cc7b4-eb6b-4be8-9b22-766c3c302ecb" />
+<img width="321" height="389" alt="image" src="https://github.com/user-attachments/assets/66a8386c-1124-4a4d-9e6e-23132f73d34e" />
 
+On the domain controller:
 
+Open Active Directory Users and Computers
+Delete the old computer object (CARNAGE)
+<img width="2425" height="1264" alt="image" src="https://github.com/user-attachments/assets/845967d7-f1f8-4566-9a16-295443cb05fc" />
 
+Put FlareVM and Windows 10 on the legacy port group
 
+<img width="401" height="447" alt="image" src="https://github.com/user-attachments/assets/27a9dce4-22f2-4abd-bcf8-e2cd6d554ed2" />
 
+Join to domain
 
+Settings > System > About > Rename this PC
+<img width="323" height="384" alt="image" src="https://github.com/user-attachments/assets/29e7a0ca-908f-408d-a154-5711a2c68456" />
 
+<img width="1696" height="973" alt="image" src="https://github.com/user-attachments/assets/57cc09e2-00da-4e3f-a079-8ad40be01e73" />
 
+### Now we can remove the NIC for Internal from the Palo Alto VM and have 8 port groups
 
+We updated our Palo Alto Zones and Interfaces
 
+<img width="2114" height="720" alt="image" src="https://github.com/user-attachments/assets/7d7be698-4697-4c2a-a63d-f12b4afb3075" />
 
+<img width="3430" height="742" alt="image" src="https://github.com/user-attachments/assets/53da61e4-48ab-43d9-a16a-c7a02d9daf62" />
 
+NOw it's updated in the CLI
+<img width="798" height="613" alt="image" src="https://github.com/user-attachments/assets/850a2dfb-a958-413a-9f3f-431bca6f6108" />
 
+### Now we'll erify the Security Onion sensor is actually seeing any packets (locally)
 
+On the Security Onion sensor, run exactly this:
 
+'sudo tcpdump -i ens35 -nn'
 
+we're getting something
+<img width="1023" height="782" alt="image" src="https://github.com/user-attachments/assets/f711c0b1-3187-4823-9e39-d3d2e564db97" />
 
+### From our Ubuntu linux we attempted to ping th default gateway and could not
+<img width="742" height="247" alt="image" src="https://github.com/user-attachments/assets/0a6b9f7c-e7fe-4703-9970-3ce2d7de80d5" />
 
+Leading us to believe we misconfigured something when changing the Palo Alto configurations
+When we ran 'ip neigh show' we see we cannot reach our default gateway
 
+<img width="814" height="75" alt="image" src="https://github.com/user-attachments/assets/2a7f485f-ef43-418e-8671-8d833322ad52" />
 
+<img width="694" height="49" alt="image" src="https://github.com/user-attachments/assets/1c1e0809-3b0d-45d0-93b0-531ed4619edd" />
 
+Solution:
 
+<img width="766" height="374" alt="image" src="https://github.com/user-attachments/assets/884c4723-8607-4ffd-adde-94a1a96e9702" />
 
+<img width="945" height="335" alt="image" src="https://github.com/user-attachments/assets/f6d22ccb-06f6-4a98-8d60-090a8a344564" />
 
+'ip neigh' 
+<img width="733" height="140" alt="image" src="https://github.com/user-attachments/assets/8bed5410-4fda-425a-977e-0770a12b6e2c" />
+
+<img width="868" height="148" alt="image" src="https://github.com/user-attachments/assets/37df0703-3bff-4ee9-8bc0-6a18c7310a56" />
+
+<img width="495" height="144" alt="image" src="https://github.com/user-attachments/assets/fd37f3aa-b10f-42d1-b88c-767f6ef7daa3" />
+
+Now we can ping 
+<img width="733" height="330" alt="image" src="https://github.com/user-attachments/assets/c8a6bcd6-b468-47cb-9428-d224d4980a0a" />
 
 
 
