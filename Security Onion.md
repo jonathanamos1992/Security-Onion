@@ -316,24 +316,96 @@ Kibana - Builds more advanced visualizations and queries against collected data.
 
 ### Intro to analyst tools
 
+Alerts - Intended to be a central hub for all the malicious events detected in your enviornment.
+
+### 
+We wanted to check to see if our sensor was placed correctly so we ran 'ip addr' to check
+
+<img width="987" height="614" alt="image" src="https://github.com/user-attachments/assets/a743ae26-2275-47e6-9e51-70ccaf1ba08b" />
+
+### Breakdown
+
+lo (loopback)
+Internal-only interface
+Used by the OS to talk to itself
+127.0.0.1
+Not related to networking, sensors, or alerts
+You can ignore this for Security Onion placement.
+<img width="762" height="70" alt="image" src="https://github.com/user-attachments/assets/6ee74130-1f74-4f4d-8f17-00376390ce03" />
+
+Management interface (for the sensor) ens34 (this one matters)
+inet 192.168.100.99/24
+This confirms management IP (for the sensor)
+
+This is how the manager talks to the sensor
+Used for: Web UI, Logs shipping, SSH
+NOT used for traffic inspection
+<img width="785" height="119" alt="image" src="https://github.com/user-attachments/assets/139175cc-5497-4c1b-ae7d-a1f7135e27f0" />
+
+Monitor interface ens35 (this is the key)
+3: ens35: <BROADCAST,NOARP,PROMISC,SLAVE,UP,LOWER_UP> ...
+
+Important flags:
+
+PROMISC → sees all traffic
+NOARP → does not talk on the network
+SLAVE → attached to a bond
+
+MTU 9000 (jumbo frames, common for SPAN)
+
+This interface sniffs traffic only.
+
+<img width="944" height="51" alt="image" src="https://github.com/user-attachments/assets/d1f9409e-67c1-4bf0-8174-873804f63056" />
+
+Bond interface (logical grouping)
+4: bond0: <BROADCAST,MULTICAST,PROMISC,MASTER,UP,LOWER_UP> ...
 
 
+bond0
 
+Logical interface that groups monitor NICs
 
+MASTER means ens35 is attached to it
 
+Suricata and Zeek listen on bond0, not ens35 directly
 
+This is what actually feeds detections
 
+This is normal and correct.
 
+<img width="968" height="39" alt="image" src="https://github.com/user-attachments/assets/f1ef8e99-c9e9-48b2-8153-9fe6afcf789f" />
 
+<img width="613" height="90" alt="image" src="https://github.com/user-attachments/assets/d674dc67-fdea-419a-8bff-c7917d3f49c5" />
 
+<img width="642" height="484" alt="image" src="https://github.com/user-attachments/assets/9e9ea496-2e54-4eab-9fc4-80d88cee284d" />
 
+<img width="643" height="389" alt="image" src="https://github.com/user-attachments/assets/7821fb8b-fa9c-4a5d-9fed-6899b2c79c1d" />
 
+<img width="477" height="313" alt="image" src="https://github.com/user-attachments/assets/7371e2f6-6e34-4291-bed4-c6cc3f7bcfa3" />
 
+<img width="694" height="174" alt="image" src="https://github.com/user-attachments/assets/c0efaf3c-bad4-4650-968c-dc93ee72075a" />
 
+Docker bridge/sobridge (internal only)
+6: sobridge:
+inet 172.17.1.1/24
 
+Internal Docker networking
 
+Used by Security Onion containers
 
+Not real network traffic
 
+Ignore for sensor placement
+<img width="771" height="55" alt="image" src="https://github.com/user-attachments/assets/38a8667e-a084-4351-9a03-f1f821688ff7" />
+
+docker0
+inet 172.17.0.1/24
+
+Default Docker bridge
+
+Same purpose as above
+
+Not monitored traffic
 
 
 
