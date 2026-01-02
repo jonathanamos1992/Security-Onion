@@ -698,18 +698,25 @@ Here's what WinSCP looks like
 Pretty clear view into the files that we want.
 
 The script took some tweaking but otherwise seems like it's working.
-We cna let this run in the background while we finish setting up vCenter.
+We can let this run in the background while we finish setting up vCenter.
+
+Also make sure to turn off sleep mode temporarily
 
 
+# vCenter
 
+We've downloaded VMWare-VCSA-all.802
 
+Mount the iso
+<img width="1419" height="300" alt="image" src="https://github.com/user-attachments/assets/c64879c8-3533-4c1f-8930-5a478d1528b5" />
 
+<img width="477" height="357" alt="image" src="https://github.com/user-attachments/assets/44f100c3-07aa-4eef-8978-a38265438b83" />
 
-
-
-
-
-
+<img width="1427" height="894" alt="image" src="https://github.com/user-attachments/assets/f7bc96b3-a24f-458c-989e-c93baa71cc41" />
+<img width="1437" height="894" alt="image" src="https://github.com/user-attachments/assets/7d2127e8-a775-4654-a87c-b0bf8fefa61c" />
+<img width="1423" height="888" alt="image" src="https://github.com/user-attachments/assets/3bc93d29-e17d-4292-8e1c-45478816ae6e" />
+<img width="1421" height="890" alt="image" src="https://github.com/user-attachments/assets/e4c16d8a-4229-43ef-adb7-931554f2cde7" />
+<img width="1025" height="813" alt="image" src="https://github.com/user-attachments/assets/89f58432-2f97-4f9d-9391-e7d65d3c1a4e" />
 
 
 
