@@ -563,6 +563,144 @@ Solution:
 Now we can ping 
 <img width="733" height="330" alt="image" src="https://github.com/user-attachments/assets/c8a6bcd6-b468-47cb-9428-d224d4980a0a" />
 
+This is the updated Network Interface Table
+
+<img width="2110" height="562" alt="image" src="https://github.com/user-attachments/assets/205cc296-0447-4f85-b65e-935e559f3dfc" />
+
+### Okay now we routing is correct, let's switch back to Security Onion
+
+On the Security Onion sensor, run:
+
+'sudo tcpdump -i ens35 icmp'
+
+### Convert ethernet1/8 into a TAP interface (Step 1)
+In Palo Alto GUI:
+
+Network → Interfaces → Ethernet
+
+Edit ethernet1/8
+
+Change:
+
+Interface Type → Tap
+IP → none
+Zone → none (or a dedicated TAP zone if required)
+
+<img width="744" height="303" alt="image" src="https://github.com/user-attachments/assets/cbebc768-1f71-4fc8-b37c-8a1e3fe49eae" />
+
+Commit
+
+<img width="639" height="168" alt="image" src="https://github.com/user-attachments/assets/9a2786c1-2050-4d65-8026-73189dfda3b8" />
+
+Notice Link State up
+<img width="1942" height="749" alt="image" src="https://github.com/user-attachments/assets/d534657a-6977-4faa-9fe9-d9aaba32fd5d" />
+
+# Had to switch gameplans here. Our version of Palo Alto needs licensing to truly packet mirror.
+# Instead we are going to install vCenter and hope for the best.
+# But first we're going to back up ESXi
+
+Step 1 — Enable SSH (confirmation step)
+Host → Actions
+Enable Secure Shell (SSH)
+
+Step 2 — Connect to ESXi via SSH
+From any machine that can reach the ESXi management IP (Windows, Linux, or a VM):
+
+<img width="1120" height="618" alt="image" src="https://github.com/user-attachments/assets/51d5d484-c43a-47bd-8552-d6398c7b29f2" />
+
+Step 3 — Back up the ESXi host configuration (supported method)
+This backs up ESXi host config only (networking, users, settings).
+It does not touch VMs or datastores.
+
+3.2 Download the backup
+
+From your browser on your PC:
+
+Go to:
+
+https://<ESXI_MANAGEMENT_IP>/downloads/
+
+Download the file:
+
+configBundle-<hostname>.tgz
+Store it somewhere safe (this is your rollback safety net)
+
+This file is what you would use if:
+ESXi config gets corrupted
+vCenter enrollment goes sideways
+Networking breaks badly
+
+Do this exactly:
+
+Open a new browser tab
+
+Go to:
+
+https://192.168.3.7/ui
+
+Log in as:
+
+root
+
+Do not close this tab
+
+Then (same browser):
+
+Open another tab
+
+Paste this exact URL:
+https://192.168.3.7/downloads/52b6d7d1-678c-6f0e-64d2-672f77806f94/configBundle-Olympus.lan.tgz
+It should download immediately
+
+<img width="376" height="143" alt="image" src="https://github.com/user-attachments/assets/0bd60e67-5f94-4bb2-b8ea-bc98ac76a7cb" />
+
+### What still needs to be backed up
+
+We still need VM-level backups:
+
+Step 7 — Open the datastore and locate VM folders
+Do only this:
+
+In the ESXi Host Client, go to Storage
+Click Datastore1 (or the datastore where your VMs live)
+Click Browse
+
+You should see one folder per VM (for all 16 VMs)
+
+Step 8 — Back up VMs from the first datastore only
+
+Do only this for now:
+
+Stay in Storage → Datastore browser
+Open the first datastore (the one with most VMs)
+Pick ONE VM folder (start with a non-critical one)
+Right-click the VM folder → Download
+Wait for the download to fully complete on your desktop
+
+Do not download multiple VMs at once.
+
+
+# Scripting
+So copying each *-flat-vmdk file would take hours so we asked ChatGPT to make us a script.
+It created a script that will search the datastores and pull each file that ends in .vm and will pull the main files we want out.
+.vmx
+.vmxf
+.nvram
+.vmdk
+
+We saved the script to our local desktop in a backup folder and gave the location to ChatGPT. 
+
+We logged into WinSCP and got the fingerprint from the session to plug into our script so it can authenticate.
+
+Here's what WinSCP looks like 
+<img width="1068" height="676" alt="image" src="https://github.com/user-attachments/assets/414b04f9-b92c-426d-9bb9-3352d5875b7a" />
+
+Pretty clear view into the files that we want.
+
+The script took some tweaking but otherwise seems like it's working.
+We cna let this run in the background while we finish setting up vCenter.
+
+
 
 
 
