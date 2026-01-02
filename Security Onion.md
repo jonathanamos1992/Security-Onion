@@ -718,6 +718,55 @@ Mount the iso
 <img width="1421" height="890" alt="image" src="https://github.com/user-attachments/assets/e4c16d8a-4229-43ef-adb7-931554f2cde7" />
 <img width="1025" height="813" alt="image" src="https://github.com/user-attachments/assets/89f58432-2f97-4f9d-9391-e7d65d3c1a4e" />
 
+<img width="1029" height="815" alt="image" src="https://github.com/user-attachments/assets/e56a4622-c633-47a5-80a3-ad17fa68bb03" />
+
+<img width="1028" height="815" alt="image" src="https://github.com/user-attachments/assets/c8c56fb7-3781-4600-948d-1dcc1ee8920c" />
+
+Here we want to target our ESXi host 192.168.3.7
+port 443
+root:password123!
+
+<img width="1018" height="821" alt="image" src="https://github.com/user-attachments/assets/03bb6bc3-3b72-47b1-91c0-1d50d21e7e49" />
+
+<img width="1024" height="816" alt="image" src="https://github.com/user-attachments/assets/acc56e73-730e-4566-8d21-bd15dad3bce1" />
+
+Left VM name as default
+Password123!
+
+<img width="1025" height="817" alt="image" src="https://github.com/user-attachments/assets/e6fbb477-8f9a-434c-b1b6-759bb5bcfc6c" />
+
+Small deployment size
+<img width="1026" height="819" alt="image" src="https://github.com/user-attachments/assets/a91e8594-63f6-47cf-ac4c-700118493b4e" />
+
+We chose datastore2
+<img width="1026" height="816" alt="image" src="https://github.com/user-attachments/assets/c69bf5fb-bc2c-4e9d-971c-f942956118b6" />
+
+<img width="775" height="651" alt="image" src="https://github.com/user-attachments/assets/12a6a8f0-58af-4c18-b117-38527ce5b228" />
+<img width="706" height="124" alt="image" src="https://github.com/user-attachments/assets/a5b17ef0-9cba-4fa5-bb6a-bf9b2de71876" />
+<img width="746" height="128" alt="image" src="https://github.com/user-attachments/assets/2abcf8e5-838e-4d05-a05b-f5a150f1cc0f" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
