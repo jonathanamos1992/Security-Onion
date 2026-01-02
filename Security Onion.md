@@ -741,9 +741,7 @@ Small deployment size
 We chose datastore2
 <img width="1026" height="816" alt="image" src="https://github.com/user-attachments/assets/c69bf5fb-bc2c-4e9d-971c-f942956118b6" />
 
-<img width="775" height="651" alt="image" src="https://github.com/user-attachments/assets/12a6a8f0-58af-4c18-b117-38527ce5b228" />
-<img width="706" height="124" alt="image" src="https://github.com/user-attachments/assets/a5b17ef0-9cba-4fa5-bb6a-bf9b2de71876" />
-<img width="746" height="128" alt="image" src="https://github.com/user-attachments/assets/2abcf8e5-838e-4d05-a05b-f5a150f1cc0f" />
+<img width="1029" height="818" alt="image" src="https://github.com/user-attachments/assets/82f23f68-220d-43c7-aff3-4f159fa17933" />
 
 
 
