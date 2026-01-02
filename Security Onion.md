@@ -741,9 +741,13 @@ Small deployment size
 We chose datastore2
 <img width="1026" height="816" alt="image" src="https://github.com/user-attachments/assets/c69bf5fb-bc2c-4e9d-971c-f942956118b6" />
 
+Leaving FQDN and DNS blank for now
 <img width="1029" height="818" alt="image" src="https://github.com/user-attachments/assets/82f23f68-220d-43c7-aff3-4f159fa17933" />
 
+When ready, click finish
+<img width="1025" height="812" alt="image" src="https://github.com/user-attachments/assets/9413f66c-04a2-45c0-a2c8-0205964fb0c4" />
 
+<img width="1028" height="814" alt="image" src="https://github.com/user-attachments/assets/c8e00301-5b76-4f05-947f-a3ad171bbde8" />
 
 
 
