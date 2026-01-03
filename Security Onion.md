@@ -751,9 +751,19 @@ When ready, click finish
 
 ### Having some issues installing
 
+Ending up having to use the CLI and create a script to run
+
+<img width="935" height="32" alt="image" src="https://github.com/user-attachments/assets/e9bfe16c-0131-486d-ad56-1be3cf4a5b3a" />
+<img width="585" height="209" alt="image" src="https://github.com/user-attachments/assets/454afe7e-140d-44db-9067-8f266e3282f2" />
+
+<img width="464" height="732" alt="image" src="https://github.com/user-attachments/assets/689383c4-4e95-4eb6-98da-1ea74500e18e" />
 
 
+We also upgraded ESXi to enterprise to be able to have the license work with vCenter
 
+But we got it!
+<img width="1275" height="459" alt="image" src="https://github.com/user-attachments/assets/89c899e8-4570-477a-ae57-9a07891738df" />
+<img width="1375" height="432" alt="image" src="https://github.com/user-attachments/assets/52c82e0f-88fd-4a20-92f8-66ca950ecc4d" />
 
 
 
