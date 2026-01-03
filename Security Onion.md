@@ -756,41 +756,37 @@ Ending up having to use the CLI and create a script to run
 <img width="935" height="32" alt="image" src="https://github.com/user-attachments/assets/e9bfe16c-0131-486d-ad56-1be3cf4a5b3a" />
 <img width="585" height="209" alt="image" src="https://github.com/user-attachments/assets/454afe7e-140d-44db-9067-8f266e3282f2" />
 
-<img width="491" height="756" alt="image" src="https://github.com/user-attachments/assets/d6c953a0-75e1-4753-ab40-d59a93e7b25c" />
-
-
+<img width="333" height="596" alt="image" src="https://github.com/user-attachments/assets/2f26fe5b-f198-43ac-b414-3c4ab0e51d19" />
 
 We also upgraded ESXi to enterprise to be able to have the license work with vCenter
 
-But we got it!
-<img width="1275" height="459" alt="image" src="https://github.com/user-attachments/assets/89c899e8-4570-477a-ae57-9a07891738df" />
-<img width="1375" height="432" alt="image" src="https://github.com/user-attachments/assets/52c82e0f-88fd-4a20-92f8-66ca950ecc4d" />
+We changed DNS to 0.0.0.0
 
-For troubleshooting, press F2 and ensure ssh is enabled and bash shell is enabled
+Then went to our desktop and went to the https://192.168.3.8:5480
+Had some issues trying to run the setup from inside a vm on the management port group but was able to run from desktop since it's a more stable enviornment (i.e. more stable dns)
+
+Ran Stage 2 of the installer
+
+Success!
+
+<img width="1426" height="594" alt="image" src="https://github.com/user-attachments/assets/5b915267-112a-4016-b036-82459ed7ff9b" />
+
+<img width="3427" height="1298" alt="image" src="https://github.com/user-attachments/assets/683484a1-da86-47dd-97f6-c0c8f4ee603a" />
+<img width="3417" height="1296" alt="image" src="https://github.com/user-attachments/assets/2f45c4ac-d779-4ed8-a2e3-89b24582a3fd" />
 
 
-then press Alt+F! to get to the VCSA Appliance Photon command shell which only accepts limited commands
-<img width="1328" height="765" alt="image" src="https://github.com/user-attachments/assets/79a7650f-b3c0-4e4b-932b-ca71f07dcd1c" />
 
 
-type 'shell' to get a bash shell
-<img width="567" height="32" alt="image" src="https://github.com/user-attachments/assets/8a4d013d-4f83-4d50-94de-c45f8b82c406" />
 
-Changed the hostname to vcsa
 
-### Looks like we have to get our DNS squared away to get things to work.
 
-We're going to use Windows Server 2022 as our DNS for not only vCenter but for ESXi as well.
-<img width="815" height="252" alt="image" src="https://github.com/user-attachments/assets/2da5e899-3837-46d7-b1c5-0c772f152528" />
 
-Verify Windows Server 2022 is configured for DNS
-<img width="761" height="531" alt="image" src="https://github.com/user-attachments/assets/75ba69f7-32e1-42a7-b4ec-38e3b378de75" />
 
-<img width="853" height="387" alt="image" src="https://github.com/user-attachments/assets/812eeb75-b707-4af3-bd6b-9092c7df2d76" />
 
-<img width="878" height="358" alt="image" src="https://github.com/user-attachments/assets/9d0b5e64-4093-48bc-97fc-c258278bee89" />
 
-<img width="812" height="290" alt="image" src="https://github.com/user-attachments/assets/5eaa0d84-68b6-4fe2-b042-65889cfa602a" />
 
-### First we'll have to get connectivity from our Windows Server 2022 (192.168.120.23) to our Management-PG (192.168.3.0/24)
+
+
+
+
 
