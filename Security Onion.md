@@ -756,7 +756,8 @@ Ending up having to use the CLI and create a script to run
 <img width="935" height="32" alt="image" src="https://github.com/user-attachments/assets/e9bfe16c-0131-486d-ad56-1be3cf4a5b3a" />
 <img width="585" height="209" alt="image" src="https://github.com/user-attachments/assets/454afe7e-140d-44db-9067-8f266e3282f2" />
 
-<img width="464" height="732" alt="image" src="https://github.com/user-attachments/assets/689383c4-4e95-4eb6-98da-1ea74500e18e" />
+<img width="491" height="756" alt="image" src="https://github.com/user-attachments/assets/d6c953a0-75e1-4753-ab40-d59a93e7b25c" />
+
 
 
 We also upgraded ESXi to enterprise to be able to have the license work with vCenter
@@ -764,6 +765,66 @@ We also upgraded ESXi to enterprise to be able to have the license work with vCe
 But we got it!
 <img width="1275" height="459" alt="image" src="https://github.com/user-attachments/assets/89c899e8-4570-477a-ae57-9a07891738df" />
 <img width="1375" height="432" alt="image" src="https://github.com/user-attachments/assets/52c82e0f-88fd-4a20-92f8-66ca950ecc4d" />
+
+For troubleshooting, press F2 and ensure ssh is enabled and bash shell is enabled
+
+
+then press Alt+F! to get to the VCSA Appliance Photon command shell which only accepts limited commands
+<img width="1328" height="765" alt="image" src="https://github.com/user-attachments/assets/79a7650f-b3c0-4e4b-932b-ca71f07dcd1c" />
+
+
+type 'shell' to get a bash shell
+<img width="567" height="32" alt="image" src="https://github.com/user-attachments/assets/8a4d013d-4f83-4d50-94de-c45f8b82c406" />
+
+Changed the hostname to vcsa
+
+### Looks like we have to get our DNS squared away to get things to work.
+
+We're going to use Windows Server 2022 as our DNS for not only vCenter but for ESXi as well.
+<img width="815" height="252" alt="image" src="https://github.com/user-attachments/assets/2da5e899-3837-46d7-b1c5-0c772f152528" />
+
+Verify Windows Server 2022 is configured for DNS
+<img width="761" height="531" alt="image" src="https://github.com/user-attachments/assets/75ba69f7-32e1-42a7-b4ec-38e3b378de75" />
+
+<img width="853" height="387" alt="image" src="https://github.com/user-attachments/assets/812eeb75-b707-4af3-bd6b-9092c7df2d76" />
+
+<img width="878" height="358" alt="image" src="https://github.com/user-attachments/assets/9d0b5e64-4093-48bc-97fc-c258278bee89" />
+
+<img width="812" height="290" alt="image" src="https://github.com/user-attachments/assets/5eaa0d84-68b6-4fe2-b042-65889cfa602a" />
+
+### First we'll have to get connectivity from our Windows Server 2022 (192.168.120.23) to our Management-PG (192.168.3.0/24)
+
+***Question***
+<img width="973" height="1554" alt="image" src="https://github.com/user-attachments/assets/60c2df63-6f22-42fc-8205-e9d992afc6dd" />
+****
+
+I thought we weren't supposed to mix management plane and data plane but it seems like we need to route traffic from our 192.168.120.0/24 & 192.168.3.0/24 network. 
+In the guide we have a management object so let's see if we can route traffic
+<img width="2027" height="630" alt="image" src="https://github.com/user-attachments/assets/a0a15cf2-aa41-4163-9bf0-eef56a057f65" />
+
+<img width="807" height="617" alt="image" src="https://github.com/user-attachments/assets/916471b0-cde3-416e-8b1b-ef69adb9850b" />
+
+
+### Let's create connections from our Palo Alto to our switch
+
+<img width="515" height="105" alt="image" src="https://github.com/user-attachments/assets/1ac78ed5-9246-4597-8285-274453d9c564" />
+
+From our L3 switch, can we ping 192.168.1.253 successfully?
+No
+<img width="1104" height="608" alt="image" src="https://github.com/user-attachments/assets/f3b53697-8dc5-4ce3-bd91-ffcecc9e2e9d" />
+
+<img width="829" height="404" alt="image" src="https://github.com/user-attachments/assets/00ff9e4f-b59d-448c-9359-5eef6d9954b5" />
+
+<img width="844" height="271" alt="image" src="https://github.com/user-attachments/assets/17d4aa84-768a-4679-ac57-2d2adbc8da95" />
+
+### vCenter will live on the management VLAN (192.168.3.0/24), routed by the L3 switch, not behind Palo Alto.
+
+<img width="890" height="476" alt="image" src="https://github.com/user-attachments/assets/c066c480-d253-4664-9518-41358111eb8d" />
+
+### Next step: Check whether the L3 switch (192.168.3.1) can act as a DNS forwarder or at least forward DNS traffic cleanly for vCenter
+
+
+
 
 
 
