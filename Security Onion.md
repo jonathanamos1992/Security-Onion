@@ -871,14 +871,74 @@ Select Add host
 Choose your ESXi host (192.168.3.7)
 <img width="833" height="976" alt="image" src="https://github.com/user-attachments/assets/45abeea5-dc0b-4eff-be1c-eda39316581e" />
 
+### Create a distributed port group specifically for monitoring
+This port group will later be used by Security Onion
+It will be set so traffic is copied, not forwarded inline
 
-On the physical adapter mapping screen:
-You will finally see vmnicX
-Map vmnic0 (or whichever is management) to Uplink 1
-<img width="838" height="234" alt="image" src="https://github.com/user-attachments/assets/4ee0a00a-4afa-4233-a828-dd0cbd8bbb50" />
 
-Do NOT migrate management networking yet
-(leave the checkbox OFF)
+We'll create a monitoring-only port group on the distributed switch.
+
+This port group:
+
+Has no IP
+Has no gateway
+Is not management
+Is where Security Onion will connect to sniff traffic
+
+Do this next (slow + exact)
+
+In vCenter, click Olympus (the datacenter)
+Go to Networks
+Click Distributed Port Groups
+Click New Distributed Port Group
+
+Here we have our DVS-Monitoring Port Group
+<img width="3425" height="507" alt="image" src="https://github.com/user-attachments/assets/86c95dba-5ae4-489e-9b8b-d574fd79be9d" />
+
+<img width="837" height="203" alt="image" src="https://github.com/user-attachments/assets/2e218be9-acbc-4d7b-9682-492c7f1d1b33" />
+
+### Attach Security Onion’s monitoring network adapter to DVS-Monitoring
+
+<img width="832" height="201" alt="image" src="https://github.com/user-attachments/assets/1c6fe0f3-04f5-4af9-b4a2-e0115b3e9170" />
+
+Go to Networking → Distributed Switches → Olympus-DVS → Actions → Add and Manage Hosts.
+<img width="2383" height="1097" alt="image" src="https://github.com/user-attachments/assets/fe0552df-4a6d-48f7-816e-042ced360fb1" />
+
+Stay on Olympus-DVS
+
+Click Actions → Add and Manage Hosts
+On Select task, choose Add hosts
+Click Next
+You should now see your ESXi host (192.168.3.7)
+Check the box next to that host
+Click Next
+When asked about physical adapters, map:
+vmnic0 → Uplink 1
+Do NOT migrate vmk0
+
+Click Next → Finish
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
