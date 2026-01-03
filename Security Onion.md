@@ -749,8 +749,7 @@ When ready, click finish
 
 <img width="1028" height="814" alt="image" src="https://github.com/user-attachments/assets/c8e00301-5b76-4f05-947f-a3ad171bbde8" />
 
-
-
+### Having some issues installing
 
 
 
