@@ -775,6 +775,89 @@ Success!
 <img width="3417" height="1296" alt="image" src="https://github.com/user-attachments/assets/2f45c4ac-d779-4ed8-a2e3-89b24582a3fd" />
 
 
+### So this is the management page, to get to the vsphere client
+
+https://192.168.3.8/ui
+
+administrator@vsphere.local:Easypassword123
+<img width="3428" height="1303" alt="image" src="https://github.com/user-attachments/assets/701be1bf-0281-4490-b87c-f3fc54dcecf1" />
+
+New Datacenter
+<img width="572" height="256" alt="image" src="https://github.com/user-attachments/assets/359efd47-e698-4c75-951c-5be2f327e36e" />
+
+Add Host
+<img width="3419" height="1289" alt="image" src="https://github.com/user-attachments/assets/6b6c1caa-da09-440f-a8bc-a7f329a9f58e" />
+
+<img width="837" height="991" alt="image" src="https://github.com/user-attachments/assets/62bcaaad-a462-422b-abe9-3f42f01a3182" />
+
+Credentials for ESXi so vCenter can have admin access
+<img width="837" height="437" alt="image" src="https://github.com/user-attachments/assets/bf5249ce-a913-4807-bc9e-ee336b139544" />
+
+
+<img width="590" height="398" alt="image" src="https://github.com/user-attachments/assets/e930b580-dd08-46bb-abe2-85a4433c943c" />
+
+<img width="830" height="711" alt="image" src="https://github.com/user-attachments/assets/638dd1d0-4c63-4cec-ab61-a82a462a24d2" />
+
+We'll uncheck "Manage host with an image" 
+<img width="924" height="970" alt="image" src="https://github.com/user-attachments/assets/7782c894-968d-4f4b-b708-74b9fb7baccf" />
+
+Select license 1
+<img width="835" height="974" alt="image" src="https://github.com/user-attachments/assets/7f36cd0b-2920-4609-b21c-7bbfa8526df2" />
+
+Disable Lockdown Mode
+<img width="828" height="971" alt="image" src="https://github.com/user-attachments/assets/7c1279f7-42ed-4460-96b2-ec66213d7814" />
+
+<img width="845" height="981" alt="image" src="https://github.com/user-attachments/assets/8bc50e15-4127-49ca-b751-210689261529" />
+
+<img width="843" height="998" alt="image" src="https://github.com/user-attachments/assets/b844780f-39c3-474c-91d4-888b1ee942b9" />
+
+<img width="3424" height="1276" alt="image" src="https://github.com/user-attachments/assets/16997e6e-8c7f-4fa1-9b0c-e6ffec3f272c" />
+
+<img width="900" height="793" alt="image" src="https://github.com/user-attachments/assets/b1523d4c-8ae1-41e1-ae03-4d7fd48f120f" />
+
+### Next Step Create a Cluster
+
+Right-click Olympus > New Cluster
+<img width="3426" height="1292" alt="image" src="https://github.com/user-attachments/assets/49f51064-6bf4-4241-97cf-5cf3ef6a6aa7" />
+
+Turn off DRS, H and Management hosts with single image
+<img width="836" height="968" alt="image" src="https://github.com/user-attachments/assets/f2128854-c7ea-49d8-901d-cd05455f5df6" />
+<img width="837" height="982" alt="image" src="https://github.com/user-attachments/assets/81804d67-a49f-4da9-abc1-47771ef477a7" />
+
+Now we have our cluster
+<img width="3425" height="1283" alt="image" src="https://github.com/user-attachments/assets/eff2c65e-1357-4672-b5f9-4d5d3ac8a3b7" />
+
+### Create a vSphere Distributed Switch (VDS) at the Datacenter (Olympus) level.
+
+In the left tree, click Olympus (Datacenter) > Networks > Actions → Distributed Switch → New Distributed Switch
+<img width="3426" height="1291" alt="image" src="https://github.com/user-attachments/assets/0580b5ad-08db-4f08-92f3-3dad638dace5" />
+
+Right now, your host is still using standard vSwitches, which is totally normal at this stage.
+
+<img width="754" height="370" alt="image" src="https://github.com/user-attachments/assets/dadfcba0-1e17-4894-b811-38d640c4cead" />
+
+<img width="856" height="940" alt="image" src="https://github.com/user-attachments/assets/586f4565-aa84-4ef8-84ee-4d63d2a5dc22" />
+
+### Step 1 — Create the distributed switch (safe step)
+
+You must start from the Datacenter, not the host or the cluster.
+In the left tree, click Olympus (the datacenter icon, not the cluster).
+Click the Networks tab.
+Click Distributed Switches.
+Click Actions → New Distributed Switch.
+
+You should now see a wizard.
+<img width="1956" height="940" alt="image" src="https://github.com/user-attachments/assets/74de93f6-bff1-44e6-b7e9-bc03656cb099" />
+<img width="874" height="723" alt="image" src="https://github.com/user-attachments/assets/40e48e29-2e7c-4c5e-8771-6e448592831a" />
+
+### Step 2 — Wizard choices
+Step 2 — Wizard choices
+<img width="591" height="724" alt="image" src="https://github.com/user-attachments/assets/786b7f73-980f-4f0a-a52a-511de3757f02" />
+
+
+
+
+
 
 
 
