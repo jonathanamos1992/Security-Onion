@@ -854,10 +854,31 @@ You should now see a wizard.
 Step 2 — Wizard choices
 <img width="591" height="724" alt="image" src="https://github.com/user-attachments/assets/786b7f73-980f-4f0a-a52a-511de3757f02" />
 
+<img width="863" height="718" alt="image" src="https://github.com/user-attachments/assets/e898b430-f724-450a-9bcf-f842d431301a" />
+
+<img width="880" height="707" alt="image" src="https://github.com/user-attachments/assets/6bf21d61-7ee7-4f9c-9e90-a5d53a54fa6b" />
+<img width="3408" height="513" alt="image" src="https://github.com/user-attachments/assets/b2eed6bc-b1a2-4b4c-90b3-c2f5510736f6" />
 
 
+### Now we attach the ESXi host to the Distributed Switch.
+
+Do this:
+
+Click Olympus-DVS
+Click Actions
+Choose Add and Manage Hosts
+Select Add host
+Choose your ESXi host (192.168.3.7)
+<img width="833" height="976" alt="image" src="https://github.com/user-attachments/assets/45abeea5-dc0b-4eff-be1c-eda39316581e" />
 
 
+On the physical adapter mapping screen:
+You will finally see vmnicX
+Map vmnic0 (or whichever is management) to Uplink 1
+<img width="838" height="234" alt="image" src="https://github.com/user-attachments/assets/4ee0a00a-4afa-4233-a828-dd0cbd8bbb50" />
+
+Do NOT migrate management networking yet
+(leave the checkbox OFF)
 
 
 
