@@ -1058,16 +1058,31 @@ We're going to put this one in the Data Analysis port gorup and give it internet
 <img width="1621" height="1201" alt="image" src="https://github.com/user-attachments/assets/6a440042-abfa-4948-887c-a8afc665399d" />
 
 <img width="1625" height="1220" alt="image" src="https://github.com/user-attachments/assets/970f0d18-e660-4d21-b3c0-cb368421158c" />
+<img width="1628" height="1218" alt="image" src="https://github.com/user-attachments/assets/6ca420d3-367a-4461-ac74-6aeaa0b92da5" />
+
+<img width="1630" height="1213" alt="image" src="https://github.com/user-attachments/assets/2e948a34-f9b2-4eb2-a702-dd6433fd5a96" />
+
+<img width="1631" height="1218" alt="image" src="https://github.com/user-attachments/assets/1b0c27ac-d080-44fa-96ec-ae8ee0cd2a42" />
+
+Let's create other vm's in the data analysis port group (192.168.110.0/24) and use them to access the sec onion web gui. We can also give them internet access too so when we find pcaps and throw them directly into security onion
+
+<img width="1629" height="1216" alt="image" src="https://github.com/user-attachments/assets/1625a123-e735-4cfe-9a69-dcdf4f94ac03" />
+
+<img width="1662" height="1221" alt="image" src="https://github.com/user-attachments/assets/a1250d70-f995-4921-a40a-1995c10bd921" />
 
 
+### Palo Alto firewall
 
+#### Sec Onion
+<img width="1139" height="394" alt="image" src="https://github.com/user-attachments/assets/0560d809-e529-4da6-9887-81714fe15346" />
+<img width="1108" height="422" alt="image" src="https://github.com/user-attachments/assets/196e557e-9ee3-435e-9f99-8d0356e03664" />
+<img width="1102" height="430" alt="image" src="https://github.com/user-attachments/assets/a3b88f30-f0bb-4d52-b295-3785d2fa2f24" />
+<img width="1139" height="397" alt="image" src="https://github.com/user-attachments/assets/a4937a3f-bf6c-47a4-aa38-9591110fea24" />
+<img width="1142" height="412" alt="image" src="https://github.com/user-attachments/assets/fad5eb13-38c9-48d8-ae73-599c82cdfe60" />
+<img width="1161" height="417" alt="image" src="https://github.com/user-attachments/assets/2d241138-35be-47fa-adbf-17a1be83a6bb" />
 
-
-
-
-
-
-
+Windows 11 (Data-Analysis)
+<img width="1081" height="387" alt="image" src="https://github.com/user-attachments/assets/2285dffe-856a-4afd-9e9e-cfa11a644b55" />
 
 
 
