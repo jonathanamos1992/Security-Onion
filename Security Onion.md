@@ -901,54 +901,94 @@ Here we have our DVS-Monitoring Port Group
 
 <img width="832" height="201" alt="image" src="https://github.com/user-attachments/assets/1c6fe0f3-04f5-4af9-b4a2-e0115b3e9170" />
 
-Go to Networking → Distributed Switches → Olympus-DVS → Actions → Add and Manage Hosts.
-<img width="2383" height="1097" alt="image" src="https://github.com/user-attachments/assets/fe0552df-4a6d-48f7-816e-042ced360fb1" />
+From vCenter, add DVS-Monitoring NIC to Sec Onion Sensor and remove SPAN/TAP nic
+<img width="3412" height="1289" alt="image" src="https://github.com/user-attachments/assets/1030e9d4-74f6-40c9-9344-60bc34841d2f" />
 
-Stay on Olympus-DVS
+<img width="868" height="447" alt="image" src="https://github.com/user-attachments/assets/aed364ab-ae4a-4259-95c4-3f454da96b4d" />
 
-Click Actions → Add and Manage Hosts
-On Select task, choose Add hosts
-Click Next
-You should now see your ESXi host (192.168.3.7)
-Check the box next to that host
-Click Next
-When asked about physical adapters, map:
-vmnic0 → Uplink 1
-Do NOT migrate vmk0
-
-Click Next → Finish
+### Okay let's test out what we've got
 
 
+### We're going to add port groups to our distributed vswitch to generate traffic for Sec Onion
 
+<img width="755" height="65" alt="image" src="https://github.com/user-attachments/assets/b82937d2-3f8a-4bea-b70d-3d8fd467687e" />
+
+<img width="792" height="264" alt="image" src="https://github.com/user-attachments/assets/183ebd59-daa7-4d29-be09-f2626d643f87" />
+
+<img width="854" height="1004" alt="image" src="https://github.com/user-attachments/assets/a6623d4d-a2d8-4eb7-b152-7ac0a0ef2eac" />
+
+AND SO ON
 
 
 
 
+################################
+Step 1: Open the Sensor Console
+
+In vCenter:
+Select Security Onion Sensor
+Click Console
+
+Step 2: Confirm interfaces (MOST IMPORTANT)
+
+ip addr
+
+You should see:
+
+One interface with an IP → this is Tools / management
+One interface with NO IP → this is DVS-Monitoring (capture)
+
+<img width="1644" height="985" alt="image" src="https://github.com/user-attachments/assets/248a61d0-ba04-410f-9f5a-d123874d149b" />
+
+Second nic has MAC address from DVS-Monitoring
+<img width="2944" height="930" alt="image" src="https://github.com/user-attachments/assets/5e4f546e-f53b-4067-bce0-5969d821ab1d" />
+
+Step 3: Verify packet capture sees traffic
+
+Still in the sensor console, run:
+
+'sudo so-status'
+
+<img width="887" height="532" alt="image" src="https://github.com/user-attachments/assets/41d9d28d-acba-4ed4-995d-b7996c3b9e05" />
 
 
+Capture on the monitoring sensor
+
+sudo tcpdump -i ens35
 
 
+### In vSphere Client
+
+Go to Olympus-DVS
+
+Click Configure
+Select Port mirroring (sometimes called Mirrored Ports depending on UI)
+
+Do not create or edit anything yet — just confirm what exists.
+<img width="754" height="438" alt="image" src="https://github.com/user-attachments/assets/902d6ba2-794a-46b0-b8b0-7dea934cdd26" />
 
 
+<img width="875" height="319" alt="image" src="https://github.com/user-attachments/assets/91a12d49-e5f2-45b6-8bce-9b20d9c9002e" />
+
+<img width="788" height="239" alt="image" src="https://github.com/user-attachments/assets/e969d807-7a4b-48d2-91e2-cb7171797c08" />
 
 
+Step 1: Start a port mirroring session (do not change anything else)
 
+In vCenter:
 
+Go to Olympus-DVS
+Click Configure
+Click Port mirroring
+Click New (or Add)
 
+That opens the Port Mirroring Session wizard.
 
+Choose Distributed
+<img width="861" height="1018" alt="image" src="https://github.com/user-attachments/assets/28a4ccbf-fc0b-4c7b-a17c-4824241989ac" />
+<img width="840" height="1006" alt="image" src="https://github.com/user-attachments/assets/3b0ee011-eade-4039-9a79-74794baf1bfe" />
 
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="865" height="397" alt="image" src="https://github.com/user-attachments/assets/38c67ade-862b-4040-9b64-04aee2f0293f" />
 
 
 
