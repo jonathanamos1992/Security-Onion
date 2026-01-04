@@ -975,6 +975,9 @@ Do not create or edit anything yet — just confirm what exists.
 
 Step 1: Start a port mirroring session (do not change anything else)
 
+
+### We had to do a one for one swap with the standard nic and the DVS nic for traffic visibility port mirroring
+
 In vCenter:
 
 Go to Olympus-DVS
@@ -988,7 +991,6 @@ Choose Distributed
 <img width="861" height="1018" alt="image" src="https://github.com/user-attachments/assets/28a4ccbf-fc0b-4c7b-a17c-4824241989ac" />
 <img width="840" height="1006" alt="image" src="https://github.com/user-attachments/assets/3b0ee011-eade-4039-9a79-74794baf1bfe" />
 
-<img width="865" height="397" alt="image" src="https://github.com/user-attachments/assets/38c67ade-862b-4040-9b64-04aee2f0293f" />
 
 
 
