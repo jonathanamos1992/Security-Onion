@@ -1050,8 +1050,14 @@ We're going to put this one in the Data Analysis port gorup and give it internet
 <img width="1628" height="1222" alt="image" src="https://github.com/user-attachments/assets/3aac4e4e-81af-4e28-8c3e-58b15a5d7361" />
 <img width="1633" height="1217" alt="image" src="https://github.com/user-attachments/assets/d51fefd1-b66d-458e-9bb1-575ede4bb249" />
 
+<img width="1626" height="1218" alt="image" src="https://github.com/user-attachments/assets/24fcff9d-d2cf-4d5e-80a7-a3dde2b216a2" />
+<img width="1632" height="1214" alt="image" src="https://github.com/user-attachments/assets/cddd3635-9782-4345-b8b8-e3321767dc0c" />
+<img width="1626" height="1217" alt="image" src="https://github.com/user-attachments/assets/fc421eae-c2f7-40f6-9783-49c09963a9df" />
 
+<img width="1629" height="1213" alt="image" src="https://github.com/user-attachments/assets/a7ca4cea-d703-4699-bcf5-a883b6de58c5" />
+<img width="1621" height="1201" alt="image" src="https://github.com/user-attachments/assets/6a440042-abfa-4948-887c-a8afc665399d" />
 
+<img width="1625" height="1220" alt="image" src="https://github.com/user-attachments/assets/970f0d18-e660-4d21-b3c0-cb368421158c" />
 
 
 
