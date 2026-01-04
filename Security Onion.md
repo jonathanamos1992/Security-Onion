@@ -992,6 +992,57 @@ Choose Distributed
 <img width="840" height="1006" alt="image" src="https://github.com/user-attachments/assets/3b0ee011-eade-4039-9a79-74794baf1bfe" />
 
 
+<img width="829" height="156" alt="image" src="https://github.com/user-attachments/assets/02221423-d9b1-49b9-8cab-aa6420ed8e3f" />
+
+<img width="883" height="96" alt="image" src="https://github.com/user-attachments/assets/27daacf8-d901-45ce-b689-8c480d27bd26" />
+<img width="825" height="973" alt="image" src="https://github.com/user-attachments/assets/99bf6daf-26bb-429c-bae4-f9725b460cce" />
+
+<img width="853" height="972" alt="image" src="https://github.com/user-attachments/assets/9d184ba6-f3f9-4183-8dff-f1f44e6aa6b3" />
+
+
+<img width="2733" height="966" alt="image" src="https://github.com/user-attachments/assets/c5dea3ab-2dbd-414b-8240-11af92327116" />
+
+<img width="834" height="233" alt="image" src="https://github.com/user-attachments/assets/5398c58b-4d60-496e-8c66-d5de7e5729b7" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
