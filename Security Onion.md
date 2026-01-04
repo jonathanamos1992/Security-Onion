@@ -1020,7 +1020,8 @@ We're going to put this one in the Data Analysis port gorup and give it internet
 
 <img width="999" height="623" alt="image" src="https://github.com/user-attachments/assets/9b987869-ac47-4567-81a1-9fe6b42e8a56" />
 
-<img width="1636" height="1220" alt="image" src="https://github.com/user-attachments/assets/0fa6f961-3d28-4a49-8330-29e1f0fd3e02" />
+<img width="829" height="717" alt="image" src="https://github.com/user-attachments/assets/cd8d7d1a-f7c2-4b7e-ab6e-780d62149536" />
+
 
 
 <img width="1626" height="1219" alt="image" src="https://github.com/user-attachments/assets/bb6505a3-ca42-4123-a05f-f5ff589d1ff8" />
@@ -1048,7 +1049,7 @@ We're going to put this one in the Data Analysis port gorup and give it internet
 <img width="1628" height="1211" alt="image" src="https://github.com/user-attachments/assets/2000c134-e411-4727-a2a5-904fb0319757" />
 <img width="1628" height="1222" alt="image" src="https://github.com/user-attachments/assets/3aac4e4e-81af-4e28-8c3e-58b15a5d7361" />
 
-<img width="1631" height="1222" alt="image" src="https://github.com/user-attachments/assets/5834269d-132f-4f26-b18a-845f2cef09b2" />
+
 
 
 
