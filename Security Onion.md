@@ -1081,15 +1081,22 @@ Let's create other vm's in the data analysis port group (192.168.110.0/24) and u
 <img width="1142" height="412" alt="image" src="https://github.com/user-attachments/assets/fad5eb13-38c9-48d8-ae73-599c82cdfe60" />
 <img width="1161" height="417" alt="image" src="https://github.com/user-attachments/assets/2d241138-35be-47fa-adbf-17a1be83a6bb" />
 
-Windows 11 (Data-Analysis)
-<img width="1081" height="387" alt="image" src="https://github.com/user-attachments/assets/2285dffe-856a-4afd-9e9e-cfa11a644b55" />
+Data-Analysis VM's
+<img width="1083" height="383" alt="image" src="https://github.com/user-attachments/assets/ab5aca8d-e138-4ed0-8c8d-a613bf721a39" />
+<img width="1095" height="421" alt="image" src="https://github.com/user-attachments/assets/c9ad5bbc-6822-4d52-9f4a-b49131f6b9e0" />
+<img width="1075" height="417" alt="image" src="https://github.com/user-attachments/assets/0ce59d8e-c340-4dc4-97ae-bf1771690ea0" />
+<img width="1094" height="396" alt="image" src="https://github.com/user-attachments/assets/e2f74cb1-72cd-43b0-b68e-ca114187cc74" />
+<img width="1097" height="416" alt="image" src="https://github.com/user-attachments/assets/1fdc93ec-7764-4f8a-abab-3f53b60bb124" />
+<img width="1079" height="357" alt="image" src="https://github.com/user-attachments/assets/6b89ae91-1c0e-45c3-b8e1-f203c79411e9" />
 
 
 
+<img width="2718" height="660" alt="image" src="https://github.com/user-attachments/assets/15b7634d-f9f0-40a9-a120-8e719131779d" />
 
 
 
-
+### Nat Rules
+<img width="896" height="410" alt="image" src="https://github.com/user-attachments/assets/9ab53dbb-fe45-48f2-93cf-cc265bd0404e" />
 
 
 
