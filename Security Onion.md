@@ -1006,23 +1006,49 @@ Choose Distributed
 
 
 
+### Packet Replay
+
+<img width="808" height="233" alt="image" src="https://github.com/user-attachments/assets/aa13aec6-2ab6-4c47-97b7-2cac255d418f" />
+
+So if we want to do packet replay, we'll have to create another instance of Security Onion
+We're going to put this one in the Data Analysis port gorup and give it internet access.
+
+<img width="944" height="588" alt="image" src="https://github.com/user-attachments/assets/cb585d8f-1e2b-46ef-ad86-b9277da16a3c" />
+
+<img width="952" height="601" alt="image" src="https://github.com/user-attachments/assets/49998543-ef05-4bb0-81f0-f7dcafcf177a" />
 
 
+<img width="999" height="623" alt="image" src="https://github.com/user-attachments/assets/9b987869-ac47-4567-81a1-9fe6b42e8a56" />
+
+<img width="1636" height="1220" alt="image" src="https://github.com/user-attachments/assets/0fa6f961-3d28-4a49-8330-29e1f0fd3e02" />
 
 
+<img width="1626" height="1219" alt="image" src="https://github.com/user-attachments/assets/bb6505a3-ca42-4123-a05f-f5ff589d1ff8" />
+
+<img width="1640" height="1211" alt="image" src="https://github.com/user-attachments/assets/7e7269ee-abd5-4b18-8f29-1f91c4028c01" />
 
 
+<img width="1632" height="1211" alt="image" src="https://github.com/user-attachments/assets/a80da8a2-8c48-46c9-8a93-9943c41d9b0a" />
+
+<img width="1631" height="1214" alt="image" src="https://github.com/user-attachments/assets/e6b02827-cfe9-4140-a54b-2fc52c021bac" />
+
+<img width="1635" height="1224" alt="image" src="https://github.com/user-attachments/assets/7391217d-3624-4c2a-9aa7-dbfc077f8fc8" />
+
+<img width="1630" height="1229" alt="image" src="https://github.com/user-attachments/assets/1a6d9144-8f45-4455-8d89-3838fa44ce54" />
+
+<img width="1629" height="1218" alt="image" src="https://github.com/user-attachments/assets/7f7cab84-34a1-4950-afbc-f63ac3ce141a" />
 
 
+<img width="830" height="343" alt="image" src="https://github.com/user-attachments/assets/1aa389b3-dece-4756-aa2d-8c5e3c45bd01" />
 
+<img width="1627" height="1221" alt="image" src="https://github.com/user-attachments/assets/0484bad8-11a1-4669-bd8c-8d59873a96c8" />
 
+<img width="832" height="726" alt="image" src="https://github.com/user-attachments/assets/4431e97e-a33a-4a33-84be-26940a56739c" />
+<img width="1631" height="1222" alt="image" src="https://github.com/user-attachments/assets/ce5621d8-a8fb-4259-baa6-1cdb4d5f871e" />
+<img width="1628" height="1211" alt="image" src="https://github.com/user-attachments/assets/2000c134-e411-4727-a2a5-904fb0319757" />
+<img width="1628" height="1222" alt="image" src="https://github.com/user-attachments/assets/3aac4e4e-81af-4e28-8c3e-58b15a5d7361" />
 
-
-
-
-
-
-
+<img width="1631" height="1222" alt="image" src="https://github.com/user-attachments/assets/5834269d-132f-4f26-b18a-845f2cef09b2" />
 
 
 
