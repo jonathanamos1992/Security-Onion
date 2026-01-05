@@ -1097,6 +1097,131 @@ Data-Analysis VM's
 
 ### Nat Rules
 <img width="896" height="410" alt="image" src="https://github.com/user-attachments/assets/9ab53dbb-fe45-48f2-93cf-cc265bd0404e" />
+<img width="1046" height="466" alt="image" src="https://github.com/user-attachments/assets/4e75b6f5-966e-47b3-8a3c-b85365db21ee" />
+<img width="1009" height="542" alt="image" src="https://github.com/user-attachments/assets/a5f3ab5d-5418-46b5-bf7d-ed705fd5c750" />
+
+***
+PALO ALTO INHERENTLY DENIES PING SO HAVE TO PUT MANAGMENT PROFILE TO ALLOW PING
+***
+
+Changed native vlan on switch to 777
+<img width="713" height="433" alt="image" src="https://github.com/user-attachments/assets/b5fb9f06-3a46-4bf7-8253-b9f58bab9747" />
+
+### The Palo Alto needs a VLAN-tagged subinterface (ethernet1/2.777) because it cannot use a native VLAN on a Layer-3 port.
+
+If you want, next step we can do just one thing:
+
+Create ethernet1/2.777 together, cleanly, step by step.
+
+Goal (keep this in your head)
+
+We are going to:
+
+Keep Gi0/1 as a trunk
+Tag VLAN 777
+Give the Palo Alto a VLAN subinterface that can actually talk on that trunk
+
+
+Step 1 — Create the VLAN subinterface on the Palo Alto (nothing else yet)
+
+On the Palo Alto GUI:
+Go to Network → Interfaces → Ethernet
+Click ethernet1/2
+Click Add Subinterface (Bottom Left)
+<img width="902" height="650" alt="image" src="https://github.com/user-attachments/assets/88d128c8-407a-4953-b1a9-8ff62401046a" />
+
+Set:
+
+Interface name: ethernet1/2.777
+Tag: 777
+Virtual Router: your existing VR (probably default)
+Security Zone: EXTERNAL
+<img width="771" height="493" alt="image" src="https://github.com/user-attachments/assets/d2cc67bf-0ad1-4e3d-9fb9-596bd0cacc17" />
+
+IPv4 address: 192.168.1.253/24
+<img width="729" height="493" alt="image" src="https://github.com/user-attachments/assets/bad500fc-3f18-4d7f-b695-250158589704" />
+<img width="901" height="626" alt="image" src="https://github.com/user-attachments/assets/bc7d4347-2f11-4830-a7cc-a58b0e7854ef" />
+<img width="783" height="364" alt="image" src="https://github.com/user-attachments/assets/53cb2794-addf-4a82-96a5-2c70b895b9f2" />
+<img width="816" height="505" alt="image" src="https://github.com/user-attachments/assets/6ed43ceb-03ec-4c80-b852-743226c63128" />
+<img width="1422" height="61" alt="image" src="https://github.com/user-attachments/assets/fff33243-7a56-437e-b31e-d95c7db57b71" />
+
+
+Click OK
+
+Commit
+
+### Change VLAN ID
+
+<img width="1144" height="694" alt="image" src="https://github.com/user-attachments/assets/50d11f86-a618-49eb-b70f-9a155460e444" />
+
+### Turns out we do not have a nic attached to our vCenter switch
+<img width="2446" height="1009" alt="image" src="https://github.com/user-attachments/assets/423f0673-fe96-44a4-8d84-7f6547634b74" />
+
+
+Step 1 — Go to the Hosts tab of the DVS
+
+Click Olympus-DVS
+Click the Hosts tab (top row, next to Ports / VMs)
+You should see:
+Your ESXi host listed
+Possibly “Not configured” or “0 uplinks”
+
+
+Step 2 — Manage host networking
+
+Select your ESXi host in the list
+Click ACTIONS
+Choose Add and Manage Hosts
+Select Manage host networking
+
+Click Next
+
+<img width="1154" height="988" alt="image" src="https://github.com/user-attachments/assets/62fd1abc-90d1-4392-9b71-2e10f7c67fa6" />
+
+Next
+<img width="1156" height="989" alt="image" src="https://github.com/user-attachments/assets/83f73c87-6a31-4547-ad9d-51d0caadf36c" />
+
+
+
+**
+
+<img width="831" height="648" alt="image" src="https://github.com/user-attachments/assets/c8e22e0c-294b-41e6-8c55-7230aa50dd2c" />
+<img width="1153" height="976" alt="image" src="https://github.com/user-attachments/assets/836d9380-30e0-4a6a-83a4-265ef6be2569" />
+<img width="1152" height="976" alt="image" src="https://github.com/user-attachments/assets/d6209ef7-2db0-4c23-94d8-3080b5a27e84" />
+
+
+Mamangement in ESXi has been migrated
+<img width="3428" height="1107" alt="image" src="https://github.com/user-attachments/assets/f6d4838f-d072-4610-a2d3-7b2ffe1bb310" />
+
+Did not move VM NIC0
+
+<img width="864" height="298" alt="image" src="https://github.com/user-attachments/assets/d5f1995d-5c62-402d-99bd-329d21e7a365" />
+
+### I'm going to call it a night and add naother vmnic to our topology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
