@@ -1280,6 +1280,7 @@ After deleting all additional NIC and leaving just management and external with 
 ### NOPE
 
 
+<img width="1190" height="503" alt="image" src="https://github.com/user-attachments/assets/ca72c4ce-3466-48d8-b694-cd93b4714193" />
 
 
 
