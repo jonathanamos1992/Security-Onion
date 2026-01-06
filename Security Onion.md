@@ -1283,18 +1283,36 @@ After deleting all additional NIC and leaving just management and external with 
 <img width="1190" height="503" alt="image" src="https://github.com/user-attachments/assets/ca72c4ce-3466-48d8-b694-cd93b4714193" />
 
 
+### RESET
 
 
 
+<img width="2766" height="373" alt="image" src="https://github.com/user-attachments/assets/25271777-b7d7-4556-b161-7813d0b311fb" />
+So the next move is to add vmnic0 to the DVS, but without dropping management.
 
 
 
+<img width="613" height="660" alt="image" src="https://github.com/user-attachments/assets/ec65b7ad-3574-4970-8d3c-75229a4d531c" />
+
+Click ADD
+
+You should now see:
+Uplink 1
+Uplink 2
+Do not remove Uplink 1
+
+Click OK
+
+<img width="420" height="218" alt="image" src="https://github.com/user-attachments/assets/c3d9411a-be44-4369-bdf5-869861b8f87f" />
 
 
+Step 7 — Attach vmnic0 to the DVS (safe, no outage)
 
+We will add vmnic0 to the DVS, not remove anything yet.
 
+<img width="921" height="601" alt="image" src="https://github.com/user-attachments/assets/99dd1669-e247-4743-8d5c-7b4277a101b6" />
 
-
+<img width="1623" height="766" alt="image" src="https://github.com/user-attachments/assets/502952c0-f93f-44ae-a9c1-7daf0de20c3f" />
 
 
 
