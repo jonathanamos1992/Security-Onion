@@ -1199,6 +1199,91 @@ Did not move VM NIC0
 
 ### I'm going to call it a night and add naother vmnic to our topology.
 
+### Second vmnic added
+
+I'm pretty sure we changed previously changed our native vlan to 777 for security reasons.
+let's change it back.
+
+'conf t'
+'interface gi0/1'
+'switchport trunk native vlan 777'
+'end'
+'show interfaces trunk'
+
+<img width="758" height="260" alt="image" src="https://github.com/user-attachments/assets/f606ba67-ef72-45a3-a962-e861c584577b" />
+
+
+<img width="751" height="352" alt="image" src="https://github.com/user-attachments/assets/eebc0306-15e4-47fe-b137-8e6759450f6d" />
+
+“VLAN 777 will remain unused and unrouted; all functional networks will be tagged VLANs.”
+It exists only to catch untagged frames on trunks
+
+
+<img width="790" height="209" alt="image" src="https://github.com/user-attachments/assets/942be08b-1356-4cc7-ad73-45f09bd891cd" />
+
+
+<img width="797" height="98" alt="image" src="https://github.com/user-attachments/assets/0af5f481-4627-4fa9-99fa-8ef2d735a99f" />
+<img width="425" height="168" alt="image" src="https://github.com/user-attachments/assets/089fdd9d-fe5f-44c2-b2ed-3de038b2daee" />
+
+<img width="663" height="383" alt="image" src="https://github.com/user-attachments/assets/0566ce34-ce7c-4084-9e8c-9d2739d12a9c" />
+<img width="1729" height="722" alt="image" src="https://github.com/user-attachments/assets/4c88b294-7860-4a9d-8232-7db38d407283" />
+
+#### We need to add one physical uplink (vmnic) to the Distributed Switch
+
+In vCenter:
+
+Go to Networking
+Select Olympus-DVS (your distributed switch)
+Actions → Add and Manage Hosts
+Select your ESXi host → Next
+Choose Manage host networking
+On Physical adapters, assign vmnic1 to Uplink 1
+<img width="974" height="1027" alt="image" src="https://github.com/user-attachments/assets/74191bd4-09b2-48d0-ab7d-6f8b0a85d794" />
+
+Next → Finish
+
+Step 14d (proceed safely)
+
+Click NEXT
+On Manage VMkernel adapters:
+Do NOT migrate anything
+Leave everything unchecked / unchanged
+Click NEXT
+
+On Migrate VM networking:
+Do NOT migrate anything
+
+Click NEXT → FINISH
+
+NIC added
+<img width="826" height="914" alt="image" src="https://github.com/user-attachments/assets/816c9b24-f5d4-409e-b70d-629e3e17c1cc" />
+
+<img width="877" height="607" alt="image" src="https://github.com/user-attachments/assets/d34dc76f-2388-4695-8f6b-d4e43dd4b0ce" />
+
+<img width="734" height="349" alt="image" src="https://github.com/user-attachments/assets/c45da59e-f11c-4e0e-934b-32f97c7b038c" />
+
+
+we deleted dvs-dmz nic
+
+
+<img width="867" height="526" alt="image" src="https://github.com/user-attachments/assets/f90948c4-4947-45ea-b61d-1bc10408bca6" />
+
+After deleting all additional NIC and leaving just management and external with the goal of trunking all traffic on external, we see traffic still coming in on ehternet1/1 which is legacy-internal
+
+<img width="1842" height="1205" alt="image" src="https://github.com/user-attachments/assets/155da374-9185-41a7-ae2e-825b9be813f4" />
+<img width="1813" height="772" alt="image" src="https://github.com/user-attachments/assets/75ad7339-fd4c-4d8a-b66a-04e1b9f1d941" />
+
+
+<img width="903" height="621" alt="image" src="https://github.com/user-attachments/assets/ae0d809d-ff72-4837-af25-7930f46dda72" />
+
+
+### NOPE
+
+
+
+
+
+
 
 
 
