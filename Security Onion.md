@@ -1310,9 +1310,96 @@ Step 7 — Attach vmnic0 to the DVS (safe, no outage)
 
 We will add vmnic0 to the DVS, not remove anything yet.
 
-<img width="921" height="601" alt="image" src="https://github.com/user-attachments/assets/99dd1669-e247-4743-8d5c-7b4277a101b6" />
+<img width="777" height="428" alt="image" src="https://github.com/user-attachments/assets/d235e522-ed09-4ffb-9821-cfe25743fff0" />
 
-<img width="1623" height="766" alt="image" src="https://github.com/user-attachments/assets/502952c0-f93f-44ae-a9c1-7daf0de20c3f" />
+
+<img width="926" height="987" alt="image" src="https://github.com/user-attachments/assets/3e3c89ee-589f-42a9-9811-9ba7f169bae1" />
+
+<img width="905" height="991" alt="image" src="https://github.com/user-attachments/assets/11c46571-767d-456c-b5fb-f889e1150efd" />
+
+
+<img width="895" height="965" alt="image" src="https://github.com/user-attachments/assets/2d664772-4285-4d75-9205-85ddb71d4279" />
+
+<img width="768" height="331" alt="image" src="https://github.com/user-attachments/assets/11520b49-7d6d-47e2-81fd-6221135b3da9" />
+
+<img width="937" height="1001" alt="image" src="https://github.com/user-attachments/assets/b975f433-5fe8-4fc6-a2e3-f1f47f38619f" />
+
+Didn't work
+
+
+<img width="928" height="613" alt="image" src="https://github.com/user-attachments/assets/b963a2e6-39fe-4adb-b06b-e70c72ba0e3e" />
+
+<img width="856" height="706" alt="image" src="https://github.com/user-attachments/assets/762fb934-c802-427d-9b93-a9db99c7fa28" />
+
+<img width="859" height="439" alt="image" src="https://github.com/user-attachments/assets/3f4c2560-54e2-4604-a2ed-78c2cd760454" />
+
+<img width="2484" height="60" alt="image" src="https://github.com/user-attachments/assets/0bdc73e2-c1be-4479-b7be-ffe95c9aeed4" />
+
+<img width="3408" height="1113" alt="image" src="https://github.com/user-attachments/assets/a0b41034-84d9-4f11-ab63-2075881a962e" />
+
+<img width="811" height="358" alt="image" src="https://github.com/user-attachments/assets/000e6a11-c219-4044-8e6b-f981ddf77bf9" />
+
+<img width="763" height="486" alt="image" src="https://github.com/user-attachments/assets/5cea10cd-781e-49a4-8703-cd6d86216408" />
+
+<img width="951" height="896" alt="image" src="https://github.com/user-attachments/assets/ff3c2c9b-dcc2-4d86-9ee2-5636595d8141" />
+
+
+<img width="1089" height="615" alt="image" src="https://github.com/user-attachments/assets/2c5b7302-304f-4018-90d7-1c23458dccac" />
+
+
+<img width="927" height="741" alt="image" src="https://github.com/user-attachments/assets/8c59f1e5-48ad-419c-a2da-82d336f1c5d5" />
+
+<img width="474" height="141" alt="image" src="https://github.com/user-attachments/assets/ee6483ff-4c44-40d8-bebc-2faf24649aa9" />
+
+<img width="835" height="429" alt="image" src="https://github.com/user-attachments/assets/43b7c7ef-036f-45f2-ac44-d743f25f8ef3" />
+
+<img width="1709" height="320" alt="image" src="https://github.com/user-attachments/assets/d80879d6-cf56-4cc0-998c-85282f3962f4" />
+
+
+<img width="1022" height="202" alt="image" src="https://github.com/user-attachments/assets/aab56289-baf8-42cc-a4ae-813f446c4783" />
+
+<img width="2432" height="73" alt="image" src="https://github.com/user-attachments/assets/d0fb8b17-02a4-417f-9431-5bcdf3001047" />
+
+
+### Step 28 — Explicitly add vmnic0 to the DVS (no disruption)
+
+
+<img width="827" height="519" alt="image" src="https://github.com/user-attachments/assets/be933ea5-654e-4952-adc3-3f12f913b87b" />
+
+<img width="908" height="977" alt="image" src="https://github.com/user-attachments/assets/dea290a5-6e99-4707-875b-04a1ad0b7526" />
+
+
+### Step B1 — Verify Palo Alto interfaces are UP and mapped correctly
+
+
+### VM VLANs → Palo Alto → VLAN 777 → Cisco SVI (192.168.1.254) → Router (192.168.1.1) → Internet
+
+Palo Alto will:
+Have an outside IP in 192.168.1.0/24
+Default route to 192.168.1.254
+Perform NAT
+
+
+Router - Statci Route
+<img width="616" height="559" alt="image" src="https://github.com/user-attachments/assets/8bd64e42-cfdf-4f80-bcbb-8186a13ea4f9" />
+
+### NAT
+
+<img width="805" height="388" alt="image" src="https://github.com/user-attachments/assets/7447f58c-489d-4d44-ad82-ee8d9d14fb36" />
+<img width="796" height="385" alt="image" src="https://github.com/user-attachments/assets/c449ec33-161d-4248-b3f6-bc02e3b1abee" />
+<img width="794" height="295" alt="image" src="https://github.com/user-attachments/assets/ee46fb43-fbd0-44d3-804b-f6457a5668b9" />
+
+We've bungled this and goign to revert back to our previous interface setup on Palo Alto
+
+
+
+
+
+
+
+
+
+
 
 
 
