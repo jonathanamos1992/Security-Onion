@@ -1389,7 +1389,92 @@ Router - Statci Route
 <img width="796" height="385" alt="image" src="https://github.com/user-attachments/assets/c449ec33-161d-4248-b3f6-bc02e3b1abee" />
 <img width="794" height="295" alt="image" src="https://github.com/user-attachments/assets/ee46fb43-fbd0-44d3-804b-f6457a5668b9" />
 
-We've bungled this and goign to revert back to our previous interface setup on Palo Alto
+We've bungled this and going to revert back to our previous interface setup on Palo Alto
+
+
+Changed ethernet1/1 to 192.168.3.2 to reach 192.168.3.1 on switch
+
+
+S<img width="677" height="243" alt="image" src="https://github.com/user-attachments/assets/c42bb8f0-b34c-4c9f-b3f4-791ec9a3e792" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
