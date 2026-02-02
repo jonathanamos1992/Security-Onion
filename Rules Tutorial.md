@@ -41,11 +41,10 @@ This is where suricata is actually running
 
 'sudo docker restart so-suricata'
 
+# Apparently the rule we made gets removed when we update so we;re going to try it in the Web UO in Detections
+<img width="2709" height="1154" alt="image" src="https://github.com/user-attachments/assets/1a252c19-0c54-4284-b829-c838a5e858f0" />
 
-
-
-
-
+<img width="2700" height="1155" alt="image" src="https://github.com/user-attachments/assets/5c3bb572-d16e-48bc-8baf-c0ee3906cfd8" />
 
 
 
