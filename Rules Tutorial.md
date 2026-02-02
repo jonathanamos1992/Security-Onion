@@ -27,13 +27,19 @@ confirm
 
 ### On the Manager Node:
 'sudo so-rule-update'
+(Should say rule added at bottom, this attempt is a redo)
 <img width="1634" height="561" alt="image" src="https://github.com/user-attachments/assets/ebc9dfdf-cd31-49af-9869-44976e92f74f" />
-<img width="1652" height="704" alt="image" src="https://github.com/user-attachments/assets/230f00e2-c05b-4c8e-a64f-ffb4f24d6a40" />
 
 
 ### We write the rules on the Manager node and the Sensor nodes pull from the Manager node to update.
+This is where suricata is actually running
+<img width="1634" height="109" alt="image" src="https://github.com/user-attachments/assets/312da5a0-d7e0-4c2f-9a5d-df2c8877cb7c" />
 
 
+
+### From the Sensor Node:
+
+'sudo docker restart so-suricata'
 
 
 
