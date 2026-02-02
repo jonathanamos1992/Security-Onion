@@ -41,7 +41,7 @@ This is where suricata is actually running
 
 'sudo docker restart so-suricata'
 
-# Apparently the rule we made gets removed when we update so we;re going to try it in the Web UO in Detections
+# Apparently the rule we made gets removed when we update so we're going to try it in the Web UO in Detections
 <img width="2709" height="1154" alt="image" src="https://github.com/user-attachments/assets/1a252c19-0c54-4284-b829-c838a5e858f0" />
 
 <img width="2700" height="1155" alt="image" src="https://github.com/user-attachments/assets/5c3bb572-d16e-48bc-8baf-c0ee3906cfd8" />
@@ -52,7 +52,8 @@ This is where suricata is actually running
 Enable rule
 <img width="2683" height="1146" alt="image" src="https://github.com/user-attachments/assets/a21c47e0-04a1-4c6d-a2b5-b499414014fd" />
 
-
+The content should've been double-quoted
+<img width="1666" height="256" alt="image" src="https://github.com/user-attachments/assets/18784915-4d26-4ff0-91a9-969ff89cb0ca" />
 
 
 
