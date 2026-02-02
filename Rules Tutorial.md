@@ -46,7 +46,11 @@ This is where suricata is actually running
 
 <img width="2700" height="1155" alt="image" src="https://github.com/user-attachments/assets/5c3bb572-d16e-48bc-8baf-c0ee3906cfd8" />
 
+(Must delete comments before adding new rule)
+<img width="2696" height="1160" alt="image" src="https://github.com/user-attachments/assets/c055119d-f3e3-4b19-afb3-e655c457e0f7" />
 
+Enable rule
+<img width="2683" height="1146" alt="image" src="https://github.com/user-attachments/assets/a21c47e0-04a1-4c6d-a2b5-b499414014fd" />
 
 
 
