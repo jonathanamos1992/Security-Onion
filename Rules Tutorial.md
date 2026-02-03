@@ -53,16 +53,17 @@ Enable rule
 <img width="2683" height="1146" alt="image" src="https://github.com/user-attachments/assets/a21c47e0-04a1-4c6d-a2b5-b499414014fd" />
 
 The content should've been double-quoted
-<img width="1666" height="256" alt="image" src="https://github.com/user-attachments/assets/18784915-4d26-4ff0-91a9-969ff89cb0ca" />
+<img width="1666" height="256" alt="image" src="https://github.com/user-attachments/assets/18784915dated26-4ff0-91a9-969ff89cb0ca" />
 
 
+### Running this on the sensor seemed to show us our rules
 
+grep '"signature":"LAB' /nsm/eve-*.json | tail
 
+Another contributing factor is time and date were out of sync across systems so logs/time frame used to search for logs were offd
+Well maybe not so much time but understand the log time format and how UTC and EST relate.
 
-
-
-
-
+The rules seem like they wrote fine.
 
 
 
